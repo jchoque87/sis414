@@ -1,0 +1,350 @@
+
+body{
+    background: #819ca7;
+}
+.container{
+    width: 90%;   
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.another-container{
+    width: 90%;   
+    max-width: 1000px;
+    margin:auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+header::before{
+    content:"";
+    display: block;
+    margin-bottom: 80px;
+}
+
+header{
+    height: 100vh;
+    background: #141213;
+    background: -webkit-linear-gradient(to right, hsla(180, 5%, 4%, 0.26), hsla(240, 3%, 8%, 0.404), hsla(251, 49%, 47%, 0.349)), url(../images/fondo.jpg);
+    background: linear-gradient(to right, hsla(180, 3%, 7%, 0.26), hsla(240, 5%, 8%, 0.404), hsla(249, 53%, 44%, 0.349)), url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    top:0;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav .logo{
+    height: 80px;
+}
+
+.nav .logo img{
+    height: 100%;
+    vertical-align: top;
+}
+
+.links-header{
+    font-weight: 300;
+    transition: ease-in-out 0.5s
+    
+}
+
+.nav .links-header a{
+    color: #ec0a0a;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+.button-menu{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+
+.button-menu > i{
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.content-header{
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+}
+
+@keyframes animationimg{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.text-header{
+    margin: 0,0,0, 30px;
+}
+.text-header>h1{
+    color: rgb(10, 5, 5);
+    font-weight: bold;
+}
+.copy{
+    color:#fff
+}
+.content-header{
+    padding: 70px;
+    font-weight: 300;
+    margin: 14px;
+    color: #0c0d0e;
+}
+.content-header a{
+    background: red;
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background:#09ffc1;
+    text-align: center;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px rgb(201, 31, 222/0.3);
+}
+.movie-us{
+    background-color: #f2f2f2;
+}
+.container-movies{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.movies{
+    width: 30%;
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+.movies:hover{
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+
+.movies > img{
+    width: 100%;
+    height: 120px;
+    margin: auto;
+}
+.movies > h3{
+    font-size: 25px;
+    margin-top: 30px;
+}
+.movies > a{
+    color: #5d6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+.nigth{
+    margin-top: 20px;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nigth>img{
+    width: 500px;
+    height: 400px;
+    vertical-align:middle;margin:30px 10px;
+    animation: ease-in animationimg 1s;
+}
+.text-nigth{
+    margin: 0 0 0 30px;
+}
+.text-nigth a{
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #1381c0;
+    text-align: center;
+    color:#fff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgb(10 217 219 / 0.45)
+}
+.price{
+    background: -webkit-linear-gradient(to right, hsla(180, 27%, 8%, 0.26), hsla(240, 31%, 6%, 0.404), hsla(251, 38%, 83%, 0.349)), url(../images/loguin2.jpg);
+    background: linear-gradient(to right, hsla(180, 21%, 6%, 0.26), hsla(240, 11%, 9%, 0.404), hsla(248, 17%, 72%, 0.349)), url(../images/loguin2.jpg);
+    padding-top: 30px;
+}
+.content-price{
+    display: flex;
+    justify-content: space-evenly;
+}
+.numbers{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.numbers .number{
+    width: 45%;
+    background: rgba(255, 8, 8, 0.2);
+    color: #fff;
+    padding:40px 35px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.numbers .number h4{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.numbers .number p{
+    color: #f2f5fc;
+    font-weight: 300;
+}
+
+.price-text{
+    width: 60%;
+}
+.price-text h4{
+    color: #fff;
+    font-size: 40px;
+}
+.price-text a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.categorie{
+    display: flex;
+    justify-content: space-between;
+}
+
+.categorie img{
+    width: 500px;
+}  
+
+.box-categorie{
+    margin: 30px 30px 0 0;
+}
+
+.box-categorie h4{
+    font-size: 25px;
+    background: #f2f2f2;
+    width: 350px;
+    border-radius: 5px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+
+.box-categorie i{
+    color: #1634df;
+    font-size: 25px;
+    margin-right: 7px;
+}
+
+footer{
+    background: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+
+.content-footer{
+    width: 20%;
+    text-align: center;
+}
+.content-footer h4{
+    color: #0055ff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+
+.content-footer a{
+    display: block;
+    text-decoration: none;
+    color:#0b57f0;
+    font-weight: bold;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.content-footer a:hover{
+    color:#080bc3
+}
+
+
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: #000000;
+    border: 1px solid #08c3c3;
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+    line-height: 37px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+}
+
+.social-media i:hover{
+    color: #fff;
+    background-color: #081ee9;
+    border-color: #08c3c3;
+}
+.content-header > img{
+    width: 510px;
+    animation: ease-in animationimg 1s;
+}
+
+
+
+
