@@ -97,6 +97,13 @@ p {
   height: 3px;
   background: #EEAD33;
 }
+/*estilos de enlaces*/
+.desing_enlace{
+  color: rgb(55, 0, 255);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
 .welcome{
   background: #6D95A0;
   text-align: center;
