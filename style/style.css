@@ -1,8 +1,11 @@
-
+@font-face{
+    font-family: 'open-sans';
+    src: url("../fonts/Open_Sans/OpenSans-Italic.ttf");
+}
 html, body{
     margin: 0px;
     padding: 0px;
-    font-family:Helvetica;
+    
 }
 /*first movile*/ 
 body{
@@ -18,7 +21,7 @@ header{
     padding:2rem 0rem;
     box-sizing: border-box;
     margin: 0px;
-    box-shadow: 1px 2px 40px#ac7e62;
+    box-shadow: 1px 2px 40px #ac7e62;
     background-color: #5b828e;
     color: #fff;
     font-size: 20px;
@@ -59,7 +62,7 @@ img{
     background-color: #bbcfd7;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 1px 2px 10px#5b828e;
+    box-shadow: 1px 2px 10px #5b828e;
 }
 #slogan>h2{
     margin: 5px 0px;
