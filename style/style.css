@@ -1,8 +1,11 @@
-
+@font-face{
+    font-family: 'open-sans';
+    src: url("../fonts/Open_Sans/OpenSans-Italic.ttf");
+}
 html, body{
     margin: 0px;
     padding: 0px;
-    font-family:Helvetica;
+    
 }
 /*first movile*/ 
 body{
@@ -18,7 +21,7 @@ header{
     padding:2rem 0rem;
     box-sizing: border-box;
     margin: 0px;
-    box-shadow: 1px 2px 40px#ac7e62;
+    box-shadow: 1px 2px 40px #ac7e62;
     background-color: #5b828e;
     color: #fff;
     font-size: 20px;
@@ -59,7 +62,7 @@ img{
     background-color: #bbcfd7;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 1px 2px 10px#5b828e;
+    box-shadow: 1px 2px 10px #5b828e;
 }
 #slogan>h2{
     margin: 5px 0px;
@@ -92,14 +95,24 @@ img{
     align-items: center;
 }
 #productos>div>img{
-   width: 50px;
+   width: 40px;
 }
 #productos>div>div{
-    padding-left:1rem;
+    padding-left:10 px;
     box-sizing: border-box;
+   
 }
 #productos>div>div>*{
-    margin: 0px;
+    margin:0px;
+    background-color: #ba9a88 ;
+    padding: 20px;
+    border-radius: 20px;
+}
+#productos>div>div:hover{
+    background-color:#fff;
+    cursor: pointer;
+    color: #05668d;
+    
 }
 main{
     background-color: #d2c8bc;
@@ -169,9 +182,13 @@ footer>p{
     flex: 1 1 100%;
     text-align: center;
     color:#ffffff;
-    font-size: 15px;
+    font-size: 35px;
+    
 }
-
+.redes>a>img{
+    height: 50px;
+    
+}
 /*tablets*/
 @media(min-width:768px){
     #slogan{
@@ -219,7 +236,7 @@ footer>div{
          flex: 1 1 25%;
      }
      .item{
-       flex: 1 1 33%;
+       flex: 1 1 10%;
      }
      footer>div{
         flex: 1 1 100%;
