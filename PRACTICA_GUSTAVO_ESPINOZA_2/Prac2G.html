@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="gj2.css">
+    <title>Document</title>
+    <script src="gj2.js"></script>
+</head>
+<body>
+    <main>
+        <form action="" name="registro" class="formulario" id="formulario" method="post" onsubmit="return validar();">
+            <h2>VERIFICACION</h2>
+            <div class="contenedor-inputs">
+                <label class="laberform" for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="   Nombre" class="formulario__input">
+                <label class="laberform" for="correo">Correo</label>
+                    <input type="text" id="correo" name="correo" placeholder="   Correo" class="formulario__input">
+                <label class="laberform" for="telefono">Telefono Fijo</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="   Telefono Fijo" class="formulario__input">
+                <label class="laberform" for="telefono8d">Telefono BO</label>
+                    <input type="text" id="telefono8d" name="telefono8d" placeholder="   Telefono de 8 digitos" class="formulario__input">
+
+                <input type="submit" name="Registrar" class="btn-enviar" onclick="obtenerdatos()">
+            </div>
+        </form>
+    </main>
+<!--
+        <table>
+            <tr>
+                <td>Nombre: </td><td><input type="text" name="nombreobtenido" id="nombreobtenido"></td>
+            </tr>
+            <tr>
+                <td>Email: </td><td><input type="text" name="emailobtenido" id="emailobtenido"></td>
+            </tr>
+            <tr>
+                <td>Telefono: </td><td><input type="text" name="telefonoobtenido" id="telefonoobtenido"></td>
+            </tr>
+            <tr>
+                <td>Telefono de 8 digitos: </td><td><input type="text" name="telefonode8digitos" id="telefonode8digitos"></td>
+            </tr>
+        </table>
+    -->        
+        <!--
+    <style>
+        #contenedor{width: 500px; margin: 0 auto;}
+        #contenedor input {width: 100%; font-size: 20px;padding: 10px;}
+        button{padding: 10px; font-size: 24px;}
+    </style>
+        -->
+    
+    
+</body>
+</html>

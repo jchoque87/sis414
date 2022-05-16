@@ -1,0 +1,155 @@
+/*creando caja-->*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+nav ul{
+    background-color: #CDA426;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+nav li{
+    display: inline-flex;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    width: 160px;
+}
+nav li:hover{
+    background-color: #EEC548;
+}
+/*titulo*/
+body{
+    background-color: #FBE6A6;
+}
+#title{
+    background-image: url(imagen1.png);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    padding: 70px;
+    background-color: #EEC548;
+}
+#title_2{
+    color: white;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*--------------------*/
+.conteiner{
+    margin-top: 350px;
+    margin: 20px 0;
+}
+#titles{
+    font-size: 30px;
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-bottom: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contenido{
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+}
+.contenido #imagen{
+    display:inline-table;
+    
+    padding: 50px;
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+#first-content{
+    border: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+/*
+#subtitle{
+    font-size: 35px;
+    padding-top: 60px;
+    padding-left: 200px;
+}
+#subtitle2{
+    font-size: 35px;
+    padding-top: 40px;
+    padding-left: 120px;
+}
+#welcome{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size:  23px;
+}
+#welcome2{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+*/
+/*pie de cabeza*/
+
+
+
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background: azure;
+    background-size: cover;
+
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 55px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+.box__footer h2{
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+.box__footer a .fab {
+    font-size: 20px;
+}
+
+
+
+

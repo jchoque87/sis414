@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #E5E5E5;
+}
+
+main{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.laberform{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+.formulario__input{
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 2px;
+    height: 45px;
+    padding: 0 40px 0 10px;
+}
+
+.btn-enviar{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    margin: 20px;
+}
