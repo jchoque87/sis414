@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  longText = "Texto desde varible";
   constructor() { }
 
   ngOnInit(): void {
