@@ -1,4 +1,5 @@
 // ---USANDO ASYNC Y AWAIT--- (EN CONSOLA)
+/*
 async function getImagenes(){
     let urilson= await fetch('https://jsonplaceholder.typicode.com/photos');
     let jsonObj= await urilson.json();
@@ -10,11 +11,11 @@ async function getImagenes(){
 }
 console.log(getImagenes());
 
-
+*/
 
 
 //OPCION 2 CON INNERHTML Y .THEN
-/*
+
 document.getElementById('apiBTN').addEventListener('click', cargar);
 
 function cargar(){
@@ -37,4 +38,3 @@ function cargar(){
         })
 }
 
-*/
