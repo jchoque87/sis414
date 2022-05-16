@@ -1,0 +1,36 @@
+.container{
+  max-width: 1000px;
+  overflow: hidden;
+  height: 100vh;
+  background: -webkit-linear-gradient(to right, hsla(180, 5%, 4%, 0.26), hsla(240, 3%, 8%, 0.404), hsla(251, 49%, 47%, 0.349)), url(./../../../assets/img/fondo.jpg);
+    background: linear-gradient(to right, hsla(180, 3%, 7%, 0.26), hsla(240, 5%, 8%, 0.404), hsla(249, 53%, 44%, 0.349)), url(./../../../assets/img/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 80px 0;
+}
+.header{
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nigth>img{
+  width: 400px;
+  height: 300px;
+  vertical-align:middle;margin:30px 10px;
+  animation: ease-in animationimg 5s;
+}
+.anuncio{
+  background-color: #99c9d8;
+}
+@keyframes animationimg{
+  0%{
+      transform: scale(0);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+.navbar{
+  background-color: #0f69f0fb;
+}

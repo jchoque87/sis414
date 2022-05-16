@@ -1,0 +1,120 @@
+.navbar{
+  background-color: #0f69f0fb;
+}
+.another-container{
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+.numbers{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.numbers .number{
+  width: 45%;
+  background: rgba(81, 196, 224, 0.2);
+  color: #fff;
+  padding:40px 35px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.numbers .number h4{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.numbers .number p{
+  color: #f2f5fc;
+  font-weight: 300;
+}
+.price{
+  overflow: hidden;
+  height: 100vh;
+  background: -webkit-linear-gradient(to right, hsla(180, 5%, 4%, 0.26), hsla(240, 3%, 8%, 0.404), hsla(251, 49%, 47%, 0.349)), url(./../../../assets/img/fondo.jpg);
+    background: linear-gradient(to right, hsla(180, 3%, 7%, 0.26), hsla(240, 5%, 8%, 0.404), hsla(249, 53%, 44%, 0.349)), url(./../../../assets/img/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.content-price{
+  display: flex;
+  justify-content: space-evenly;
+}
+.price-text{
+  width: 60%;
+}
+.price-text h4{
+  color: #fff;
+  font-size: 30px;
+}
+.price-text a{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #fff;
+  width: 120px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+.nigth{
+  background-color: #99c9d8;
+  padding: 60px 0;
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nigth>img{
+  width: 400px;
+  height: 300px;
+  vertical-align:middle;margin:30px 10px;
+  animation: ease-in animationimg 5s;
+}
+.text-nigth{
+  margin: 30px 20px 0 30px;
+}
+.text-nigth a{
+  margin: 28px 0 0 0;
+  width: 130px;
+  display: inline-block;
+  background: #e00404;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px rgba(14, 15, 15, 0.45)
+}
+.container-movies{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+.movies{
+  width: 30%;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 45px 30px 60px 30px;
+}
+.movies:hover{
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.26);
+}
+.movies > img{
+  width: 100%;
+  height: 120px;
+  margin: auto;
+}
+.movies > h3{
+  font-size: 25px;
+  margin-top: 30px;
+}
+.movies > a{
+  color: #e41616;
+  font-weight: 400;
+  text-decoration: none;
+}
