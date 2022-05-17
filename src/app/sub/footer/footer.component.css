@@ -1,0 +1,30 @@
+/*comentario*cuadraditos del ultimo footer*/
+
+.mat-grid-tile {
+    background:  #039292;
+}
+.picture {
+    background:  #57a5a5;
+    text-align: center;
+    padding: 0px;
+}
+.cuadritos,.picture{
+    height: 100px;
+}
+
+.tool11{
+    padding-top: 60px;
+    background:#303031;
+    height: 10px;
+}
+.picture{
+    
+    background: rgb(84, 88, 141);
+}
+.color-span{
+    margin-top: -60px;
+    text-align: center;
+    font-size: medium;
+    padding-left: 450px;
+    font-family: cursive;
+}
