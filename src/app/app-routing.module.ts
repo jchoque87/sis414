@@ -9,7 +9,7 @@ import { LucesSemidirectasComponent  } from './luces-semidirectas/luces-semidire
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
   { path: '', component: MainComponent },
-  { path: 'pared', component: ParedesComponent },
+  { path: 'paredes', component: ParedesComponent },
   { path: '**', component: NofoundComponent }
 ];
 
