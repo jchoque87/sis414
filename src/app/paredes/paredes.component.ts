@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParedesComponent implements OnInit {
 
-  title = "Paredes";
-
   constructor() { }
 
   ngOnInit(): void {

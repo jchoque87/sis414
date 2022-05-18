@@ -1,0 +1,13 @@
+
+
+.u-section-6 {
+  background-image: url(../../../../assets/img/11.jpg);
+  background-position: 50% 50%;
+  background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  min-height: 748px;
+}

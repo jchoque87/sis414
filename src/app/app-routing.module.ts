@@ -6,7 +6,7 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'paredes', component: ParedesComponent },
+  { path: 'pared', component: ParedesComponent },
   { path: '**', component: NofoundComponent }
 ];
 
