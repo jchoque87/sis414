@@ -1,19 +1,18 @@
-.example-spacer {
-    flex: 1 1 auto;
-    
+@font-face{
+    font-family: 'open-sans';
+    src: url("../../../assets/fonts/roboto/Roboto-Thin.ttf");
 }
-.mat-toolbar.mat-primary {
-    background:#3f51b5;
-    height: 120px;
+header{
+    margin:0px;
+    padding: 0px; 
+    background-color: #5b828e;
+    flex:1 1 100%;
 }
-span{
-    padding-top: 85px;
-    padding-bottom: 50px;
-    padding-left: 30px;
-    font-size:40px;
-    font-weight: bold;
-    font-family: serif;   
+div{
+    box-shadow: 35px 35px 45px #5b828e;
+   align-items: center ;
 }
-#tittle{
-    color: rgb(229, 248, 56);
+h1{
+    font-size: 50px;
+    color: #fff;
 }
