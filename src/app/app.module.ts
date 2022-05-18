@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ParedesComponent } from './paredes/paredes.component';
-import { HeaderComponent } from './paredes/sub/header/header.component';
 import { FlooteComponent } from './paredes/sub/floote/floote.component';
 import { Parte1Component } from './paredes/sub/parte1/parte1.component';
 import { Parte2Component } from './paredes/sub/parte2/parte2.component';
@@ -27,10 +26,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {TextFieldModule} from '@angular/cdk/text-field';
-import {MatGridListModule} from '@angular/material/grid-list';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { TextFieldModule } from '@angular/cdk/text-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { HeaderComponent } from './sub/header/header.component';
+import { ContainerComponent } from './sub/container/container.component';
+import { FooterComponent } from './sub/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     Parte5Component,
     Parte6Component,
     Parte7Component,
+    ContainerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
