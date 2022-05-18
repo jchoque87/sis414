@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { LucesSemidirectasComponent } from './luces-semidirectas/luces-semidirectas.component';
 import { LinksComponent } from './sub/links/links.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -34,6 +35,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HeaderComponent } from './sub/header/header.component';
 import { ContainerComponent } from './sub/container/container.component';
 import { FooterComponent } from './sub/footer/footer.component';
+import { PisosComponent } from './pisos/pisos.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +61,7 @@ import { FooterComponent } from './sub/footer/footer.component';
     Parte7Component,
     ContainerComponent,
     FooterComponent,
+    PisosComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +69,7 @@ import { FooterComponent } from './sub/footer/footer.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
+    MatFormFieldModule,
     LayoutModule,
     MatButtonModule,
     MatSidenavModule,
@@ -74,6 +81,8 @@ import { FooterComponent } from './sub/footer/footer.component';
     MatProgressBarModule,
     TextFieldModule,
     MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
