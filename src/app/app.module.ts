@@ -9,6 +9,10 @@ import { PuertasComponent } from './puertas/puertas.component';
 import { NofoundComponent } from './nofound/nofound.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './sub/header/header.component';
+import { AsideComponent } from './sub/aside/aside.component';
+import { FooterComponent } from './sub/footer/footer.component';
+import { MueblesDormitorioComponent } from './muebles-dormitorio/muebles-dormitorio.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,7 +27,11 @@ import { MatCardModule } from '@angular/material/card';
     ParedesComponent,
     PuertasComponent,
     NofoundComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent,
+    AsideComponent,
+    FooterComponent,
+    MueblesDormitorioComponent
   ],
   imports: [
     BrowserModule,

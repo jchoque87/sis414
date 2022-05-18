@@ -61,8 +61,10 @@
   text-align: center;
   border-radius: 5px;
 }
-.nigth{
+.noticias{
   background-color: #99c9d8;
+}
+.nigth{
   padding: 60px 0;
   height: 600px;
   display: flex;
