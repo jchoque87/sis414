@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
@@ -20,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { LucesSemidirectasComponent } from './luces-semidirectas/luces-semidirectas.component';
+import { LinksComponent } from './sub/links/links.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCommonModule } from '@angular/material/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -41,6 +43,8 @@ import { FooterComponent } from './sub/footer/footer.component';
     PuertasComponent,
     NofoundComponent,
     MainComponent,
+    LucesSemidirectasComponent,
+    LinksComponent,
     HeaderComponent,
     FlooteComponent,
     Parte1Component,
@@ -66,6 +70,7 @@ import { FooterComponent } from './sub/footer/footer.component';
     MatListModule,
     MatCommonModule,
     MatToolbarModule,
+    MatDatepickerModule,
     MatProgressBarModule,
     TextFieldModule,
     MatGridListModule,

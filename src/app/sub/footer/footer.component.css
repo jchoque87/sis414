@@ -1,30 +1,30 @@
-footer{
-    background-color: #5b828e;
-    color: white;
-    flex: 1 1 100%;
-    box-shadow: 1px 1px 20px #000000;
-}
+/*comentario*cuadraditos del ultimo footer*/
 
-.redes{
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    color: white;
+.mat-grid-tile {
+    background:  #039292;
 }
-footer>p{
-    
+.picture {
+    background:  #57a5a5;
     text-align: center;
-    color:#ffffff;
-    font-size: 35px;
-
-    
+    padding: 0px;
+}
+.cuadritos,.picture{
+    height: 100px;
 }
 
-.redes>a>img{
-    height: 50px;
-    border-radius: 200%;
-    
+.tool11{
+    padding-top: 60px;
+    background:#303031;
+    height: 10px;
 }
-
+.picture{
+    
+    background: rgb(84, 88, 141);
+}
+.color-span{
+    margin-top: -60px;
+    text-align: center;
+    font-size: medium;
+    padding-left: 450px;
+    font-family: cursive;
+}
