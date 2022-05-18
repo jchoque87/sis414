@@ -14,6 +14,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 
+import { LucesSemidirectasComponent } from './luces-semidirectas/luces-semidirectas.component';
+import { HeaderComponent } from './sub/header/header.component';
+import { FooterComponent } from './sub/footer/footer.component';
+import { LinksComponent } from './sub/links/links.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -23,7 +32,12 @@ import { MatCardModule } from '@angular/material/card';
     ParedesComponent,
     PuertasComponent,
     NofoundComponent,
-    MainComponent
+    MainComponent,
+
+    LucesSemidirectasComponent,
+    HeaderComponent,
+    FooterComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +45,11 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatDatepickerModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
