@@ -14,6 +14,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 
+import { HeaderComponent } from './sub/header/header.component';
+import { ContainerComponent } from './sub/container/container.component';
+import { FooterComponent } from './sub/footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { MatCardModule } from '@angular/material/card';
     ParedesComponent,
     PuertasComponent,
     NofoundComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent,
+    ContainerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
