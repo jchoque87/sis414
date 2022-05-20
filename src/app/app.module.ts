@@ -16,6 +16,10 @@ import { PuertasComponent } from './puertas/puertas.component';
 import { NofoundComponent } from './nofound/nofound.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AsideComponent } from './sub/aside/aside.component';
+import { MueblesDormitorioComponent } from './muebles-dormitorio/muebles-dormitorio.component';
+
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -49,6 +53,9 @@ import { ContactoComponent } from './contacto/contacto.component';
     PuertasComponent,
     NofoundComponent,
     MainComponent,
+
+    AsideComponent,
+    MueblesDormitorioComponent,
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
@@ -63,7 +70,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ContainerComponent,
     FooterComponent,
     PisosComponent,
-    ContactoComponent
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
