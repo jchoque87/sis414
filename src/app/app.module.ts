@@ -38,6 +38,7 @@ import { FooterComponent } from './sub/footer/footer.component';
 import { PisosComponent } from './pisos/pisos.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { MatInputModule } from '@angular/material/input';
     ContainerComponent,
     FooterComponent,
     PisosComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

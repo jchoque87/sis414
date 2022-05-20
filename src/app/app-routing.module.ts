@@ -6,12 +6,13 @@ import { NofoundComponent } from './nofound/nofound.component';
 import { MainComponent } from './main/main.component';
 
 import { LucesSemidirectasComponent  } from './luces-semidirectas/luces-semidirectas.component';
-
+import { ContactoComponent } from './contacto/contacto.component';
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
   { path: '', component: MainComponent },
   { path: 'paredes', component: ParedesComponent },
   { path: 'pisos', component: PisosComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: '**', component: NofoundComponent }
 ];
 
