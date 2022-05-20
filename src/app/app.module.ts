@@ -43,6 +43,8 @@ import { PisosComponent } from './pisos/pisos.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { ContactoComponent } from './contacto/contacto.component';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -92,6 +94,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
