@@ -54,8 +54,7 @@ import { MatInputModule } from '@angular/material/input';
     MainComponent,
 
     AsideComponent,
-    MueblesDormitorioComponent
-
+    MueblesDormitorioComponent,
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
