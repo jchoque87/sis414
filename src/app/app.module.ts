@@ -1,3 +1,4 @@
+import { Parte8Component } from './paredes/sub/parte8/parte8.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -45,6 +46,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ContactoComponent } from './contacto/contacto.component';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 @NgModule({
@@ -73,6 +76,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     PisosComponent,
     ContactoComponent,
+    Parte8Component,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +100,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatTableModule,
     HttpClientModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

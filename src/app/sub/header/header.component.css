@@ -2,17 +2,25 @@
     font-family: 'open-sans';
     src: url("../../../assets/fonts/roboto/Roboto-Thin.ttf");
 }
-header{
+.uno{
     margin:0px;
-    padding: 0px; 
-    background-color: #5b828e;
-    flex:1 1 100%;
+    padding: 0px;
+    background-color: #4c7397;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+
 }
 div{
-    box-shadow: 35px 35px 45px #5b828e;
+    box-shadow: 35px 35px 45px #4c7397;
    align-items: center ;
 }
 h1{
     font-size: 50px;
     color: #fff;
+    padding-bottom: 10px;
+}
+
+.uno1 {
+  flex : 1  1 auto;
 }
