@@ -2,28 +2,36 @@ footer{
     background-color: #5b828e;
     color: white;
     flex: 1 1 100%;
-    box-shadow: 1px 1px 20px #000000;
-}
-
-.redes{
-    flex: 1 1 100%;
+    padding:2rem;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    color: white;
+    flex-flow: row ;
+   
 }
-footer>p{
-    
+footer>div{
+    flex: 1 1 100%;
+}
+#footer_contacto{
     text-align: center;
-    color:#ffffff;
-    font-size: 35px;
-
     
 }
+#footer_contacto>p,.msj{
+     margin: 10px;
+     text-align: center;
+     color:#ffffff;
+     font-size: 22px;
+     margin-right: 10px;
+}
 
-.redes>a>img{
+#footer_social{
+   justify-content: end;
+    padding: top 1rem;
+    
+}
+#footer_social>a>img{
+    margin-left: 20px;
     height: 50px;
     border-radius: 200%;
+    box-shadow: 3px 3px 3px 3px #494746;
     
 }
+
