@@ -1,3 +1,4 @@
+import { Parte8Component } from './paredes/sub/parte8/parte8.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,9 +17,14 @@ import { PuertasComponent } from './puertas/puertas.component';
 import { NofoundComponent } from './nofound/nofound.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AsideComponent } from './sub/aside/aside.component';
+import { MueblesDormitorioComponent } from './muebles-dormitorio/muebles-dormitorio.component';
+
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { LucesSemidirectasComponent } from './luces-semidirectas/luces-semidirectas.component';
 import { LinksComponent } from './sub/links/links.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -34,6 +40,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HeaderComponent } from './sub/header/header.component';
 import { ContainerComponent } from './sub/container/container.component';
 import { FooterComponent } from './sub/footer/footer.component';
+import { PisosComponent } from './pisos/pisos.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { ContactoComponent } from './contacto/contacto.component';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
+
+
 
 @NgModule({
   declarations: [
@@ -43,6 +58,9 @@ import { FooterComponent } from './sub/footer/footer.component';
     PuertasComponent,
     NofoundComponent,
     MainComponent,
+
+    AsideComponent,
+    MueblesDormitorioComponent,
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
@@ -56,6 +74,9 @@ import { FooterComponent } from './sub/footer/footer.component';
     Parte7Component,
     ContainerComponent,
     FooterComponent,
+    PisosComponent,
+    ContactoComponent,
+    Parte8Component,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +84,7 @@ import { FooterComponent } from './sub/footer/footer.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
+    MatFormFieldModule,
     LayoutModule,
     MatButtonModule,
     MatSidenavModule,
@@ -74,6 +96,11 @@ import { FooterComponent } from './sub/footer/footer.component';
     MatProgressBarModule,
     TextFieldModule,
     MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
+    MatTableModule,
+    HttpClientModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

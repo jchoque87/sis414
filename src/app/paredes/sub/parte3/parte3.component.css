@@ -13,14 +13,13 @@
 
 .u-layout-row{
   display: flex;
-  margin-left: 46px;
   height: 870px;
-  width: 1373px;
+  width: 1347px;
   padding-top: 125px;
-  margin-left: 90px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
+  padding-left: 51px;
 
 }
 .u-section-3 {
@@ -75,8 +74,8 @@
 }
 
 .u-section-3 .u-image-3 {
-  height: 378px;
-  margin-top: 46px;
-  margin-right: auto;
+  height: 384px;
+  margin-top: 86px;
+  margin-right: 0;
   margin-left: 0;
 }

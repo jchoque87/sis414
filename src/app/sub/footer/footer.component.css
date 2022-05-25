@@ -1,30 +1,34 @@
-/*comentario*cuadraditos del ultimo footer*/
-
-.mat-grid-tile {
-    background:  #039292;
+footer{
+    background-color: #4c7397;
+    color: white;
+    flex: 1 1 100%;
+    padding:2rem;
+    display: flex;
+    flex-flow: row ;
 }
-.picture {
-    background:  #57a5a5;
+footer>div{
+    flex: 1 1 100%;
+}
+#footer_contacto{
     text-align: center;
-    padding: 0px;
-}
-.cuadritos,.picture{
-    height: 100px;
-}
-
-.tool11{
-    padding-top: 60px;
-    background:#303031;
-    height: 10px;
-}
-.picture{
     
-    background: rgb(84, 88, 141);
 }
-.color-span{
-    margin-top: -60px;
-    text-align: center;
-    font-size: medium;
-    padding-left: 450px;
-    font-family: cursive;
+#footer_contacto>p,.msj{
+     margin: 10px;
+     text-align: center;
+     color:#ffffff;
+     font-size: 22px;
+     margin-right: 10px;
 }
+
+#footer_social{
+   justify-content: end;
+    padding: top 1rem;
+}
+#footer_social>a>img{
+    margin-left: 20px;
+    height: 50px;
+    border-radius: 200%;
+    box-shadow: 3px 3px 3px 3px #494746;
+}
+
