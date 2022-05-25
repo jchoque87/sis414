@@ -1,8 +1,29 @@
-<div class="uno">
-  <h1>Casa Diseño</h1>
-
-  <button routerLink='' at-icon-button  class = "icono-de-ejemplo">
-     <mat-icon>logout</mat-icon>
-  </button>
-</div>
+<header>
+    <div id="uno">
+        <br>
+    <h1>Casa Diseño</h1>
+     </div>
+     <link rel="stylesheet" href="header.component.css">
+    <section>
+     <div class="example-button-row">
+      <img src="../../../assets/img/zarla1.png">
+       <a mat-button [routerLink]="['/index']" >Menu principal</a>
+       <img src="../../../assets/img/zarla1.png">
+       <a mat-button [routerLink]="['/paredes']">Paredes</a>
+       <img src="../../../assets/img/zarla1.png">
+       <a mat-button [routerLink]="['/pisos']">Pisos</a>
+       <img src="../../../assets/img/zarla1.png">
+       <a mat-button >Muebles</a>
+       <img src="../../../assets/img/zarla1.png">
+       <a mat-button [routerLink]="['/lucessemidirectas']">luces</a>
+       <img src="../../../assets/img/zarla1.png">
+       <a mat-button >Contacto</a>
+       
+       <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+       
+         
+       </button>
+     </div>
+ </section>
+</header>
 
