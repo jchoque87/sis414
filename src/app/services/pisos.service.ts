@@ -7,10 +7,14 @@ import { HttpClient } from '@angular/common/http';
 export class PisosService {
 
   configUrl = "https://jsonplaceholder.typicode.com/users";
+  configUrlPost = "https://reqres.in/api/users";
   
   constructor(private http: HttpClient) { }
 
-  getUsers() {
+  getUsers(){
     return this.http.get<any>(this.configUrl);
-  }  
+  } 
+  addUser(data:any){
+    return this.http.post<any>(this.configUrlPost,data);
+  } 
 }

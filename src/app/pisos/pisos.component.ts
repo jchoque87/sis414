@@ -22,6 +22,8 @@ export class PisosComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'phone', 'username','website','email'];
   dataSource: any[] = [];
+  nombre:  any = "";
+  trabajo: any = "";
 
   constructor(private pisos: PisosService) { }
 
@@ -29,6 +31,17 @@ export class PisosComponent implements OnInit {
     this.pisos.getUsers().subscribe(
       (data: any) => {
         this.dataSource = data;
+      })
+  }
+
+  SaveData(){
+    const data = {
+      "name": this.nombre,
+      "job": this.trabajo
+    };    
+    this.pisos.addUser(data).subscribe(
+      (data: any) => {
+        console.log(data);
       })
   }
 
