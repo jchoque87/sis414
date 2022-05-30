@@ -20,7 +20,7 @@ export interface users {
 })
 export class PisosComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'phone', 'username','website','email'];
+  displayedColumns: string[] = ['job', 'name'];
   dataSource: any[] = [];
   nombre:  any = "";
   trabajo: any = "";
@@ -30,7 +30,7 @@ export class PisosComponent implements OnInit {
   ngOnInit(): void {
     this.pisos.getUsers().subscribe(
       (data: any) => {
-        this.dataSource = data;
+        this.dataSource = Object.keys(data).map((key) => { return data[key] });
       })
   }
 
