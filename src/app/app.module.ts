@@ -48,6 +48,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { FormsModule } from '@angular/forms';
     PisosComponent,
     ContactoComponent,
     Parte8Component,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

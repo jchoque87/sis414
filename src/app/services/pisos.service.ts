@@ -6,8 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PisosService {
 
-  configUrl = "https://jsonplaceholder.typicode.com/users";
-  configUrlPost = "https://reqres.in/api/users";
+  configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com/users.json";
   
   constructor(private http: HttpClient) { }
 
@@ -15,6 +14,6 @@ export class PisosService {
     return this.http.get<any>(this.configUrl);
   } 
   addUser(data:any){
-    return this.http.post<any>(this.configUrlPost,data);
+    return this.http.post<any>(this.configUrl,data);
   } 
 }
