@@ -14,12 +14,16 @@ export class Parte8Component implements OnInit {
     if (!this.tabLoadTimes[index]) {
       this.tabLoadTimes[index] = new Date();
     }
-
     return this.tabLoadTimes[index];
   }
 
   displayedColumns: string[] = ['id', 'name', 'phone', 'username','website','email'];
   dataSource: any[] = [];
+  nombre:     any = "";
+  phone:    any = "";
+  username: any = "";
+  website: any = "";
+  email: any = "";
 
   constructor(private pared: ParedService) { }
 
@@ -27,6 +31,20 @@ export class Parte8Component implements OnInit {
     this.pared.getUsers().subscribe(
       (data: any) => {
         this.dataSource = data;
+      })
+  }
+
+  SaveData(){
+    const data = {
+      "name": this.nombre,
+      "username": this.username,
+      "phone": this.phone,
+      "website": this.website,
+      "email": this.email
+    };
+    this.pared.addUser(data).subscribe(
+      (data: any) => {
+        console.log(data);
       })
   }
 
