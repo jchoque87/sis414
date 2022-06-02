@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 export class PisosService {
 
   configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com/users.json";
-  
   constructor(private http: HttpClient) { }
 
   getUsers(){
@@ -16,4 +15,5 @@ export class PisosService {
   addUser(data:any){
     return this.http.post<any>(this.configUrl,data);
   } 
+  
 }
