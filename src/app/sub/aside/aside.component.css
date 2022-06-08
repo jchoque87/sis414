@@ -1,6 +1,9 @@
 .navbar{
   background-color: #0f69f0fb;
 }
+table {
+  width: 100%;
+}
 .another-container{
   width: 90%;
   max-width: 1000px;
