@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ParedService } from '../sercices/pared.service';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 
 @Component({
@@ -7,6 +8,7 @@ import { ParedService } from '../sercices/pared.service';
   templateUrl: './parte8.component.html',
   styleUrls: ['./parte8.component.css']
 })
+
 export class Parte8Component implements OnInit {
 
   tabLoadTimes: Date[] = [];
@@ -17,30 +19,43 @@ export class Parte8Component implements OnInit {
     return this.tabLoadTimes[index];
   }
 
-  displayedColumns: string[] = ['id', 'name', 'phone', 'username','website','email'];
-  dataSource: any[] = [];
-  nombre:     any = "";
-  phone:    any = "";
-  username: any = "";
-  website: any = "";
-  email: any = "";
+  displayedColumns: string[] = ['name','decor','desing','place', 'details','borrar'];
+  dataSource:   any[] = [];
+  name:         any = "";
+  decoracion:    any = "";
+  desing:       any = "";
+  lugar:          any = "";
+  detalles:        any = "";
+  borrar:          any="";
 
   constructor(private pared: ParedService) { }
+  
 
   ngOnInit(): void {
     this.pared.getUsers().subscribe(
       (data: any) => {
-        this.dataSource = data;
+        this.dataSource = Object.keys(data).map((key) => {
+          const newData={
+            id:key,
+            name:data[key].name,
+            decor:data[key].decor,
+            desing:data[key].desing,
+            place:data[key].place,
+            details:data[key].details
+          }
+          return newData });
       })
   }
 
+
+
   SaveData(){
     const data = {
-      "name": this.nombre,
-      "username": this.username,
-      "phone": this.phone,
-      "website": this.website,
-      "email": this.email
+      "name": this.name,
+      "decor": this.decoracion,
+      "desing": this.desing,
+      "place": this.lugar,
+      "details": this.detalles,
     };
     this.pared.addUser(data).subscribe(
       (data: any) => {
@@ -48,5 +63,14 @@ export class Parte8Component implements OnInit {
       })
   }
 
+  deleteData(key:string){
+    console.log(key);
+   this.pared.deleteUser(key).subscribe(data =>{
+     console.log(data);
+    }, error =>{
+       console.error(error);
+    });
+  }
 
 }
+

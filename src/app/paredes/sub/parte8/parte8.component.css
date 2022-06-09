@@ -6,11 +6,23 @@ table {
 }
 .mat-elevation-z8{
  background-color:  #4c7397;
+ padding-left: 20px;
 }
 .text{
  color: aliceblue;
 }
 P{
   color: aliceblue;
-  
 }
+.mat-form-field {
+  display: inline-block;
+  text-align: center;
+}
+.colo{
+  background-color:  #4c7397;
+}
+.boton1{
+  position: absolute;
+}
+
+
