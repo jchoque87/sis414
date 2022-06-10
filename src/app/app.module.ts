@@ -39,6 +39,11 @@ import { PisosComponent } from './pisos/pisos.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 
+import { TableComponent } from './table/table.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+
 
 @NgModule({
   declarations: [
@@ -62,6 +67,8 @@ import { MatInputModule } from '@angular/material/input';
     ContainerComponent,
     FooterComponent,
     PisosComponent,
+    TableComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -83,6 +90,12 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+
+  
+    MatDialogModule,
+  
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
