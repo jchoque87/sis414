@@ -49,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     HttpClientModule,
     MatTabsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
