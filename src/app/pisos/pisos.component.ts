@@ -20,15 +20,28 @@ export interface users {
 })
 export class PisosComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'phone', 'username','website','email'];
+  displayedColumns: string[] = ['job', 'name'];
   dataSource: any[] = [];
+  nombre:  any = "";
+  trabajo: any = "";
 
   constructor(private pisos: PisosService) { }
 
   ngOnInit(): void {
     this.pisos.getUsers().subscribe(
       (data: any) => {
-        this.dataSource = data;
+        this.dataSource = Object.keys(data).map((key) => { return data[key] });
+      })
+  }
+
+  SaveData(){
+    const data = {
+      "name": this.nombre,
+      "job": this.trabajo
+    };    
+    this.pisos.addUser(data).subscribe(
+      (data: any) => {
+        console.log(data);
       })
   }
 
