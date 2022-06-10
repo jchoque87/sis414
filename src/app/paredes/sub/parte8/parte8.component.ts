@@ -1,6 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ParedService } from '../sercices/pared.service';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
+export class GridListDynamicExample {
+  tiles: Tile[] = [
+    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
+}
 
 
 @Component({
@@ -19,7 +33,9 @@ export class Parte8Component implements OnInit {
     return this.tabLoadTimes[index];
   }
 
-  displayedColumns: string[] = ['name','decor','desing','place', 'details','borrar'];
+
+
+  displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
   dataSource:   any[] = [];
   name:         any = "";
   decoracion:    any = "";
@@ -27,9 +43,10 @@ export class Parte8Component implements OnInit {
   lugar:          any = "";
   detalles:        any = "";
   borrar:          any="";
+  actualizar:          any="";
 
   constructor(private pared: ParedService) { }
-  
+
 
   ngOnInit(): void {
     this.pared.getUsers().subscribe(
