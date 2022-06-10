@@ -1,33 +1,3 @@
-<nav class="navbar navbar-expand-sm navbar-dark">
-  <div class="container-fluid ">
-    <a class="navbar-brand" href="#">Compra en line</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">marcas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Promociones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Catalagos</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Estancias</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Salones</a></li>
-            <li><a class="dropdown-item" href="#">Dormitorios</a></li>
-            <li><a class="dropdown-item" href="#">Muebles auxiliares</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <section class="movie-us">
     <div class="another-container">
         <h2 class="title">CONOCE NUESTROS SERVICIOS</h2>
@@ -129,3 +99,62 @@
     </div>
   </div>
 </section>
+
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Nombre</mat-label>
+  <input matInput [(ngModel)]="nombre">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Trabajo</mat-label>
+  <input matInput [(ngModel)]="trabajo">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="SaveData()">Primary</button>
+<br>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> Username </th>
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="website">
+    <th mat-header-cell *matHeaderCellDef> Website </th>
+    <td mat-cell *matCellDef="let element"> {{element.website}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
