@@ -2,11 +2,14 @@
     font-family: 'open-sans';
     src: url("../../../assets/fonts/roboto/Roboto-Thin.ttf");
 }
-header{
+.uno{
     margin:0px;
-    padding: 0px; 
-    background-color: #5b828e;
-    flex:1 1 100%;
+    padding: 0px;
+    background-color: #4c7397;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 h1{

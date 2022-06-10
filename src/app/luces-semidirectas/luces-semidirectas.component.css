@@ -4,21 +4,34 @@
     
 }
 #img-one{
-    width: 1364px;
-    height: 460px;
-    object-fit: cover;
+    width: 1365px;
+    height: 490px;
+    object-fit:cover;
     background-attachment: fixed;
-    opacity:0.7;
+    
     
 }
+.example-card p{
+    font-size: 120px;
+    color: rgb(235, 243, 243);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 30px rgba(235, 233, 140, 0.8);
 
+}
+.titulo{
+    margin: 140px;
+    padding-right: 200px;
+}
 .mat-toolbar-row, .mat-toolbar-single-row{
     height: 100%;
-    background: #9da5ee;
+    background: #ccd0fd;
 }
 /*cuarta seccion*/
 .mat-grid-list,.mat-grid-tile{
-    background: #9da5ee;
+    background: #ccd0fd;
     padding-left: 60px;
 }
 
@@ -63,7 +76,7 @@
     margin-left: 350px;
 }
 .example-card1,.mat-card {
-    background: #9da5ee;
+    background: #ccd0fd;
     color: rgba(0, 0, 0, 0.993);
     
 }
