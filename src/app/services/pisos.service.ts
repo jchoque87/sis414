@@ -15,5 +15,6 @@ export class PisosService {
   }
   addUser(data:any){
     return this.http.post<any>(this.configUrl,data);
-  }
+  } 
+
 }
