@@ -49,6 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
+import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +82,9 @@ import { LoginComponent } from './login/login.component';
     ContactoComponent,
     Parte8Component,
     LoginComponent,
+    DashboardComponent,
+    PisosAdminComponent,
+    MainAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,6 +110,7 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     HttpClientModule,
     MatTabsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

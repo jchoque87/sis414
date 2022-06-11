@@ -9,6 +9,11 @@ import { MueblesDormitorioComponent } from './muebles-dormitorio/muebles-dormito
 import { LucesSemidirectasComponent  } from './luces-semidirectas/luces-semidirectas.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
+import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+
+
 
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
@@ -18,6 +23,19 @@ const routes: Routes = [
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
+
+  { path: 'admin',component: DashboardComponent, 
+    children: [
+      {
+        path:  '',
+        component:  MainAdminComponent
+      },      
+      {
+        path:  'pisos',
+        component:  PisosAdminComponent
+      }
+    ]
+  },
   { path: '**', component: NofoundComponent }
 ];
 
