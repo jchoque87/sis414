@@ -21,7 +21,7 @@ section {
     display: flex;
     justify-content: space-around;
   }
-  
+
   .example-label {
     display: table-cell;
     font-size: 30px;
@@ -30,7 +30,7 @@ section {
   }
  div{
      display: table-cell;
-     background: #5b828e;
+     background: #4c7397;
      width: 1349px;
      height: 70px;
      text-align: center;
@@ -39,13 +39,13 @@ section {
   .example-button-row .mat-button-base {
     margin: 8px 50px 8px 0;
   }
-  
+
   .example-flex-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   .example-button-container {
     display: flex;
     justify-content: center;
@@ -60,13 +60,13 @@ section {
       border-radius: 50px;
       background-color: #ba9a88 ;
       margin-left: 30px;
-   
+
   }
   img{
     height: 25px;
     box-shadow: 3px 3px 3px 3px #494746;
      border-radius: 50px;
-    
+
      justify-content: space-around;
      align-items: center;
   }
