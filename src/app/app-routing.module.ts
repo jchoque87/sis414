@@ -13,6 +13,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 
+import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path:  'pisos',
         component:  PisosAdminComponent
+      },
+      {
+        path:  'lucesemidirectas', 
+        component: LucesemidirectasAdminComponent
       }
     ]
   },
