@@ -50,17 +50,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { TableComponent } from './table/table.component';
 
-
-
-
-
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
-
 
 @NgModule({
   declarations: [
@@ -87,7 +82,13 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     ContainerComponent,
     FooterComponent,
     PisosComponent,
-    
+    ContactoComponent,
+    Parte8Component,
+    LoginComponent,
+    DashboardComponent,
+    PisosAdminComponent,
+    MainAdminComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -110,7 +111,10 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatDialogModule ,
+    MatTableModule,
+    HttpClientModule,
+    MatTabsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
