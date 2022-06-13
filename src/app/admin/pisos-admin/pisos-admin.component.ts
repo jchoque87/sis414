@@ -1,24 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { PisosService } from '../services/pisos.service';
+import { PisosService } from '../../services/pisos.service';
 
-/*
-export interface users {
-  id: number;
-  name: string;
-  phone: string;
-  username: string;
-  website: string;
-  email: string;
-}
-*/
 @Component({
-  selector: 'app-pisos',
-  templateUrl: './pisos.component.html',
-  styleUrls: ['./pisos.component.css']
+  selector: 'app-pisos-admin',
+  templateUrl: './pisos-admin.component.html',
+  styleUrls: ['./pisos-admin.component.css']
 })
-export class PisosComponent implements OnInit {
+export class PisosAdminComponent implements OnInit {
 
   displayedColumns: string[] = ['job', 'name'];
   dataSource: any[] = [];
@@ -44,5 +32,4 @@ export class PisosComponent implements OnInit {
         console.log(data);
       })
   }
-
 }

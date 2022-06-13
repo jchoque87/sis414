@@ -48,11 +48,18 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 
-
 import { TableComponent } from './table/table.component';
-import {MatDialogModule} from '@angular/material/dialog';
 
 
+
+
+
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
+import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 
 
 @NgModule({
@@ -80,16 +87,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     ContainerComponent,
     FooterComponent,
     PisosComponent,
-<<<<<<< HEAD
-    TableComponent,
     
-=======
-    ContactoComponent,
-    Parte8Component,
->>>>>>> d7cdd442a5535538df43d8d4811ed8c947881dd9
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -108,18 +110,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-<<<<<<< HEAD
-
-  
-    MatDialogModule,
-  
-   
-   
-=======
-    MatTableModule,
-    HttpClientModule,
-    MatTabsModule,
->>>>>>> d7cdd442a5535538df43d8d4811ed8c947881dd9
+    MatDialogModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]
