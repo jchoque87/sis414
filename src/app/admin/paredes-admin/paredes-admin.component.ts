@@ -73,5 +73,9 @@ export class ParedesAdminComponent implements OnInit {
     });
   }
 
+  editData(){
+    
+  }
+
 
 }
