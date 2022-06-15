@@ -4,7 +4,7 @@ mat-form-field{
     color:#fff;
     box-shadow: 5px 5px 5px 5px  #777574;
     border-radius: 10px;
-    background-color:#bbcfd7 ;
+    background-color:#5b828e ;
    
 }
 div{
@@ -16,7 +16,7 @@ mat-label{
     font-size: 15px;
 }
 h1{
-    color: #ba9a88;
+    color: #5b828e;
     font-size: 35px;
     font-style: oblique;
 }
