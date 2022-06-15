@@ -1,0 +1,50 @@
+table {
+  width: 100%;
+}
+.part8 {
+ background-color: #661cc7;
+}
+.mat-elevation-z8{
+ background-color:  #661cc7;
+ /*padding-left: 100px;*/
+}
+.text{
+ color: aliceblue;
+}
+P{
+  color: aliceblue;
+}
+.mat-form-field {
+  display: inline-block;
+  text-align: center;
+}
+.colo{
+  background-color:  #97614c;
+}
+.boton1{
+  position: absolute;
+}
+.bot2{
+background-color: rgba(255, 0, 0, 0.551);
+}
+
+
+.color{
+  background-color: #4c7397;
+}
+
+
+mat-grid-tile {
+    background:  #d9d9d9;
+}
+
+.example-card {
+  max-width:300px;
+  background-color:  #4c7397;
+}
+.mat-card-title .mat-card-subtitle{
+  color: aliceblue;
+}
+.bot{
+  background-color: #d9d9d92b;
+}

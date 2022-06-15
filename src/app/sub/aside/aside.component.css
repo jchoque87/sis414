@@ -1,8 +1,48 @@
+table {
+  width: 100%;
+}
+.example-card {
+  max-width: 400px;
+}
 .navbar{
   background-color: #0f69f0fb;
 }
 table {
   width: 100%;
+}
+.container{
+  max-width: 1000px;
+  overflow: hidden;
+  background: -webkit-linear-gradient(to right, hsla(180, 5%, 4%, 0.26), hsla(240, 3%, 8%, 0.404), hsla(251, 49%, 47%, 0.349)), url(./../../../assets/img/fondo.jpg);
+    background: linear-gradient(to right, hsla(180, 3%, 7%, 0.26), hsla(240, 5%, 8%, 0.404), hsla(249, 53%, 44%, 0.349)), url(./../../../assets/img/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 80px 50px;
+}
+.aside{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.nigth>img{
+  width: 400px;
+  height: 300px;
+  vertical-align:middle;margin:30px 10px;
+  animation: ease-in animationimg 5s;
+}
+.anuncio{
+  background-color: #99c9d8;
+}
+@keyframes animationimg{
+  0%{
+      transform: scale(0);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+.navbar{
+  background-color: #0f69f0fb;
 }
 .another-container{
   width: 90%;
@@ -68,10 +108,12 @@ table {
   background-color: #99c9d8;
 }
 .nigth{
+  background-color: #99c9d8;
   padding: 60px 0;
   height: 600px;
   display: flex;
   justify-content: space-evenly;
+  display: flex;
 }
 .nigth>img{
   width: 400px;
@@ -80,7 +122,11 @@ table {
   animation: ease-in animationimg 5s;
 }
 .text-nigth{
-  margin: 30px 20px 0 30px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 15px;
+  font-size: 15px;
+  margin: 30px 90px 140px 50px;
 }
 .text-nigth a{
   margin: 28px 0 0 0;

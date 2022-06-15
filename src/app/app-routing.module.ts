@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 
 
 
@@ -24,15 +25,19 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
 
-  { path: 'admin',component: DashboardComponent, 
+  { path: 'admin',component: DashboardComponent,
     children: [
       {
         path:  '',
         component:  MainAdminComponent
-      },      
+      },
       {
         path:  'pisos',
         component:  PisosAdminComponent
+      },
+      {
+        path:  'MueblesDormitorio',
+        component:  MueblesDormitorioAdminComponent
       }
     ]
   },

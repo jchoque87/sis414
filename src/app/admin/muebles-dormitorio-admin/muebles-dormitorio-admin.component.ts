@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 import { MueblesDormitorioService } from 'src/app/services/muebles-dormitorio.service';
 
 export interface Tile {
@@ -19,11 +17,11 @@ export class GridListDynamicExample {
 }
 
 @Component({
-  selector: 'app-aside',
-  templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.css']
+  selector: 'app-muebles-dormitorio-admin',
+  templateUrl: './muebles-dormitorio-admin.component.html',
+  styleUrls: ['./muebles-dormitorio-admin.component.css']
 })
-export class AsideComponent implements OnInit {
+export class MueblesDormitorioAdminComponent implements OnInit {
 
   tabLoadTimes: Date[] = [];
   getTimeLoaded(index: number) {
@@ -33,15 +31,15 @@ export class AsideComponent implements OnInit {
     return this.tabLoadTimes[index];
   }
 
-  displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
+  displayedColumns: string [] = ['name','furniture','desing','place', 'details','actualizar','borrar'];
   dataSource:   any[] = [];
   name:         any = "";
-  decoracion:    any = "";
   desing:       any = "";
-  lugar:          any = "";
-  detalles:        any = "";
-  borrar:          any="";
-  actualizar:          any="";
+  mate:        any = "";
+  detalles:     any = "";
+  mueble:       any = "";
+  borrar:       any = "";
+  actualizar:   any = "";
 
   constructor(private mueblesdormitorio: MueblesDormitorioService) { }
 
@@ -55,7 +53,8 @@ export class AsideComponent implements OnInit {
             decor:data[key].decor,
             desing:data[key].desing,
             place:data[key].place,
-            details:data[key].details
+            details:data[key].details,
+            furniture:data[key].furniture
           }
           return newData });
       })
@@ -63,10 +62,10 @@ export class AsideComponent implements OnInit {
   SaveData(){
     const data = {
       "name": this.name,
-      "decor": this.decoracion,
       "desing": this.desing,
-      "place": this.lugar,
+      "place": this.mate,
       "details": this.detalles,
+      "furniture": this.mueble,
     };
     this.mueblesdormitorio.addUser(data).subscribe(
       (data: any) => {
