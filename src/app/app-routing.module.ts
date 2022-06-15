@@ -10,6 +10,8 @@ import { LucesSemidirectasComponent  } from './luces-semidirectas/luces-semidire
 import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
 
+import { CreateEmpleadoComponent } from './contacto/components/create-contacto/create-empleado.component';
+
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
   { path: '', component: MainComponent },
@@ -17,8 +19,10 @@ const routes: Routes = [
   { path: 'muebles_dormitorio', component: MueblesDormitorioComponent},
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'create-empleado', component: CreateEmpleadoComponent},
   { path: 'login', component: LoginComponent},
   { path: '**', component: NofoundComponent }
+  
 ];
 
 @NgModule({

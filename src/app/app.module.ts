@@ -49,6 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ListEmpleadosComponent } from './contacto/components/list-empleados/list-empleados.component';
+import { CreateEmpleadoComponent } from './contacto/components/create-empleado/create-empleado.component';
+import { NavbarComponent } from './contacto/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +81,9 @@ import { LoginComponent } from './login/login.component';
     ContactoComponent,
     Parte8Component,
     LoginComponent,
+    ListEmpleadosComponent,
+    CreateEmpleadoComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
