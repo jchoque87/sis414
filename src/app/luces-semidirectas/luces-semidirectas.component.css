@@ -13,25 +13,25 @@
 }
 .example-card p{
     font-size: 120px;
-    color: rgb(235, 243, 243);
+    color: rgb(193, 231, 231);
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 0 0 30px rgba(235, 233, 140, 0.8);
+    text-shadow: 0 0 30px rgba(241, 241, 96, 0.8);
 
 }
 .titulo{
-    margin: 140px;
+    margin: 110px;
     padding-right: 200px;
 }
 .mat-toolbar-row, .mat-toolbar-single-row{
     height: 100%;
-    background: #ccd0fd;
+    background: #f2f3f7;
 }
 /*cuarta seccion*/
 .mat-grid-list,.mat-grid-tile{
-    background: #ccd0fd;
+    background: #fbfbff;
     padding-left: 60px;
 }
 
@@ -63,7 +63,7 @@
     border-radius: 100%;
 }
 .mat-card-title,.mat-card-subtitle{
-    padding-left: 70px;
+    padding-left:70px;
 }
 /*es el card center*/
 
@@ -76,7 +76,7 @@
     margin-left: 350px;
 }
 .example-card1,.mat-card {
-    background: #ccd0fd;
+    background: hsl(240, 26%, 95%);
     color: rgba(0, 0, 0, 0.993);
     
 }
@@ -104,12 +104,30 @@
     color: #0b5466;
     text-align: center;
     padding-bottom: 50px;
-    padding-top:-50pxmm;
+    padding-top:-50px;
     max-width: 100%;
     margin: auto;
     
 }
+#images{
+    border-radius: 100%;
+    object-fit:cover; 
+    width: 80%;
+    height: 80%;
+    transition:all .1s ease-in-out;
+}
+#images:hover{ 
+    -webkit-transform: scale(4);
+    transform: scale(1.5)
+    
+}
+h2{
+    text-align: center;
+    font-family:monospace;
+    color: rgba(25, 36, 36, 0.329);
+}
 
+/*dfgfbf*/
 #tittle{
     text-align: center;
     padding-top: 20px;
@@ -131,5 +149,35 @@
 
 table {
     width: 100%;
+}
+
+/*ofertas------------------------------------------------------------------*/
+.mat-grid-tile3{
+margin-top: 100px;
+background-color: white;
+width: 100px;
+ }
+.example-card3{
+    max-width: 280px;
+    max-height: 700px;
+    margin-top: -10px;
+}
+#imgen-matcard{
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    margin-top: -60px;
+    
+}
+#mat-card-content-p{
+  margin-top: -50px;
+  background-color:white;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: normal;
+  text-align: justify;
+  padding: 15px;
 }
 
