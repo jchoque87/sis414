@@ -56,6 +56,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
 @NgModule({
@@ -89,6 +90,7 @@ import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/l
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
   ],
