@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { ParedService } from '../sercices/pared.service';
-
-
+import { ParedService } from '../../../app/paredes/sub/sercices/pared.service';
 
 @Component({
-  selector: 'app-parte8',
-  templateUrl: './parte8.component.html',
-  styleUrls: ['./parte8.component.css']
+  selector: 'app-paredes-admin',
+  templateUrl: './paredes-admin.component.html',
+  styleUrls: ['./paredes-admin.component.css']
 })
+export class ParedesAdminComponent implements OnInit {
 
-export class Parte8Component implements OnInit {
+
+  tabLoadTimes: Date[] = [];
+  getTimeLoaded(index: number) {
+    if (!this.tabLoadTimes[index]) {
+      this.tabLoadTimes[index] = new Date();
+    }
+    return this.tabLoadTimes[index];
+  }
+
 
 
   displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
@@ -65,5 +72,6 @@ export class Parte8Component implements OnInit {
        console.error(error);
     });
   }
-}
 
+
+}

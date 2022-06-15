@@ -1,16 +1,22 @@
-table {
-  width: 100%;
+
+.color{
+  background-color: #4c7397;
 }
-.part8{
- background-color:  #4c7397;
+/*#4c7397*/
+.example-card {
+  max-width:300px;
+  background-color:  #d9d9d9;
 }
-.mat-elevation-z8{
- background-color:  #4c7397;
+
+.bot{
+  background-color: #4c7397;
 }
-.text{
- color: aliceblue;
+
+.p{
+ color:  #d9d9d9;
 }
-P{
-  color: aliceblue;
-  
+h1{
+  color: #d9d9d9;
+  padding-left: 515px;
+    padding-top: 50px;
 }
