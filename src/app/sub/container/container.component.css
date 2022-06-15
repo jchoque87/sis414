@@ -16,6 +16,18 @@ body{
     background-image:linear-gradient(0deg, #d2c8bc , rgba(255,255,255,0)) ;
     background-image:url(../../../assets/img/textura-de-madera.jpg);
 }
+button{
+    font-size: 25px;
+    display: flex;
+    flex-direction: initial;
+    color:#fff;
+    box-shadow: 3px 3px 3px 3px #494746;
+    border-radius: 50px;
+    background-color: #ba9a88 ;
+    margin-left: 30px;
+    font-style: oblique;
+    
+}
 #banner>*{
    flex:1 1 100%;
 }
@@ -118,8 +130,12 @@ main>h4{
     padding-left:2rem;
     margin-bottom:0px;
     margin-top: 10px;
-    color:#ffffff;
     font-size:x-large;
+    color:#05668d;
+    font-style: italic;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px #4a4745;
+
 
 }
 .item{
@@ -157,6 +173,7 @@ main>h4{
 }
 .item-int>div>a>h1,p{
     margin: 5px;
+    font-style: italic;
 }
 
 /*laptops*/
