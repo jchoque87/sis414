@@ -47,6 +47,9 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
+
+import { TableComponent } from './table/table.component';
+
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -85,6 +88,7 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
