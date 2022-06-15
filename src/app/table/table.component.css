@@ -1,0 +1,25 @@
+mat-form-field{
+    margin-bottom:5px;
+    width: 100%;
+    color:#fff;
+    box-shadow: 5px 5px 5px 5px  #777574;
+    border-radius: 10px;
+    background-color:#5b828e ;
+   
+}
+div{
+    background-image:url(../../assets/img/marble.webp);
+    
+}
+mat-label{
+    color:#fff;
+    font-size: 15px;
+}
+h1{
+    color: #5b828e;
+    font-size: 35px;
+    font-style: oblique;
+}
+mat-select>mat-option{
+    color: #ba9a88;
+}

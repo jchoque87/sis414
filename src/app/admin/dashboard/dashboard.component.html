@@ -10,23 +10,25 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
+    <button  mat-icon-button routerLink='' at-icon-button  class = "icono-de-ejemplo"  >
+      <mat-icon >logout</mat-icon >
+    </button>
+
+
   </mat-toolbar>
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <mat-selection-list #shoes [multiple]="false">
             <mat-list-option>
-                Dashboard
+              <a mat-button [routerLink]="['/admin']">Dashboard</a>
             </mat-list-option>
             <mat-list-option>
-                Pisos
+              <a mat-button [routerLink]="['/admin/pisos']">Pisos</a>
             </mat-list-option>
             <mat-list-option>
-                Paredes
+              <a mat-button [routerLink]="['/admin/pared']">Paredes</a>
             </mat-list-option>
-            <mat-list-option>
-              MueblesDormitorio
-          </mat-list-option>
-          </mat-selection-list>
+         </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>
