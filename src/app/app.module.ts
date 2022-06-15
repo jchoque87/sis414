@@ -56,6 +56,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    LucesemidirectasAdminComponent,
     TableComponent,
   ],
   imports: [
