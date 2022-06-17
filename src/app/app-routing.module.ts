@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { MachimbresComponent } from './machimbres/machimbres.component';
 
 
 
@@ -36,7 +37,9 @@ const routes: Routes = [
       }
     ]
   },
-  { path: '**', component: NofoundComponent }
+  { path: '**', component: NofoundComponent },
+
+  { path: 'machimbres', component: MachimbresComponent},
 ];
 
 @NgModule({

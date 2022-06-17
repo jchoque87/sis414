@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //AGREGANDO DIALOG
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogComponent } from 'src/app/dialog/dialog.component';
+
 
 
 
@@ -50,11 +50,8 @@ export class ContainerComponent implements OnInit {
    
     
   }
-  openDialog() {
-    this.dialog.open(DialogComponent, {
-      width: '30%'
-    });
-  }
+  
+  
   
 
 }

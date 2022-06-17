@@ -53,6 +53,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { MachimbresComponent } from './machimbres/machimbres.component';
+import {MatMenuModule} from '@angular/material/menu';
+
+
 
 @NgModule({
   declarations: [
@@ -85,6 +89,8 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    MachimbresComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -111,6 +117,8 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
