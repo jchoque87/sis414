@@ -1,5 +1,19 @@
+import { ParedService } from './../../paredes/sub/sercices/pared.service';
 import { Component, OnInit } from '@angular/core';
-import { ParedService } from '../../../app/paredes/sub/sercices/pared.service';
+import {  Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+
+export interface UserData {
+  id: string;
+  name: string;
+  decor: string;
+  desing: string;
+  place:string;
+  details:string;
+}
+
+
 
 @Component({
   selector: 'app-paredes-admin',
@@ -22,15 +36,14 @@ export class ParedesAdminComponent implements OnInit {
   displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
   dataSource:   any[] = [];
   name:         any = "";
-  decoracion:    any = "";
+  decor:    any = "";
   desing:       any = "";
-  lugar:          any = "";
-  detalles:        any = "";
+  place:          any = "";
+  details:        any = "";
   borrar:          any="";
   actualizar:          any="";
 
-  constructor(private pared: ParedService) { }
-
+  constructor(private pared: ParedService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.pared.getUsers().subscribe(
@@ -48,15 +61,13 @@ export class ParedesAdminComponent implements OnInit {
       })
   }
 
-
-
   SaveData(){
     const data = {
       "name": this.name,
-      "decor": this.decoracion,
+      "decor": this.decor,
       "desing": this.desing,
-      "place": this.lugar,
-      "details": this.detalles,
+      "place": this.place,
+      "details": this.details,
     };
     this.pared.addUser(data).subscribe(
       (data: any) => {
@@ -73,9 +84,82 @@ export class ParedesAdminComponent implements OnInit {
     });
   }
 
-  editData(){
-    
+  addUser(){
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogAdd, {
+      width: '300px',
+      data: {
+        name: this.name,
+        decoracion: this.decor,
+        desing: this.desing,
+        lugar:this.place,
+        detalles:this.details
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+
   }
 
+  editUser(row:any){
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '700px',
+      height:'400px',
+      data: row,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
 }
+
+
+@Component({
+  selector: 'example-dialog',
+  templateUrl: 'example-dialog.html',
+})
+export class DialogOverviewExampleDialog {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: UserData,
+    private pared: ParedService,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  updateUser():void{
+    this.pared.updateUser(this.data).subscribe(
+      (data: any) => {
+        console.log(data);
+      });
+    this.dialogRef.close();
+  }
+}
+
+
+@Component({
+  selector: 'addUser',
+  templateUrl: 'addUser.html',
+})
+export class DialogOverviewExampleDialogAdd {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: UserData,
+    private pared: ParedService,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+  addUser():void{
+
+    this.dialogRef.close();
+  }
+}
+
+

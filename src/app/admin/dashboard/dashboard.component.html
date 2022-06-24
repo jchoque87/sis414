@@ -11,7 +11,7 @@
       <mat-icon>share</mat-icon>
     </button>
     <button  mat-icon-button routerLink='' at-icon-button  class = "icono-de-ejemplo"  >
-      <mat-icon >logout</mat-icon >
+      <mat-icon >close</mat-icon >
     </button>
 
 
@@ -20,7 +20,7 @@
     <mat-drawer mode="side" opened>
         <mat-selection-list #shoes [multiple]="false">
             <mat-list-option>
-              <a mat-button [routerLink]="['/admin']">Dashboard</a>
+                <a mat-button [routerLink]="['/admin']">Dashboard</a>
             </mat-list-option>
             <mat-list-option>
               <a mat-button [routerLink]="['/admin/pisos']">Pisos</a>
