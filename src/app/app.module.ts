@@ -64,6 +64,9 @@ import { DialogOverviewExampleDialog} from './admin/paredes-admin/paredes-admin.
 import { DialogOverviewExampleDialogAdd } from './admin/paredes-admin/paredes-admin.component';
 import { MatStepperModule } from '@angular/material/stepper';
 
+import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
