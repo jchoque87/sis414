@@ -58,8 +58,6 @@ import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
-import { DialogOverviewExampleDialog } from './admin/pisos-admin/pisos-admin.component';
-import { DialogOverviewExampleDialogAdd } from './admin/pisos-admin/pisos-admin.component';
 
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
@@ -98,8 +96,6 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
-    DialogOverviewExampleDialog,
-    DialogOverviewExampleDialogAdd
   ],
   imports: [
     BrowserModule,

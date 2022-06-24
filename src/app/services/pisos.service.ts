@@ -6,25 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PisosService {
 
-  configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com"; 
+  configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com/users.json";
 
   constructor(private http: HttpClient) { }
 
   getUsers(){
-    let url= `${this.configUrl}/users.json`;
-    return this.http.get<any>(url);
+    return this.http.get<any>(this.configUrl);
   }
   addUser(data:any){
-    let url= `${this.configUrl}/users.json`;
-    return this.http.post<any>(url,data);
-  }
-  updateUser(data:any){
-    let url= `${this.configUrl}/users/${data.id}.json`;
-    const requestData = {
-      name: data.name,
-      job: data.job
-    }
-    return this.http.put<any>(url, requestData);
+    return this.http.post<any>(this.configUrl,data);
   } 
 
 }
