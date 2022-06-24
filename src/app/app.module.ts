@@ -61,6 +61,9 @@ import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/l
 import { DialogOverviewExampleDialog } from './admin/pisos-admin/pisos-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/pisos-admin/pisos-admin.component';
 
+import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
