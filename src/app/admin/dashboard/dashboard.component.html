@@ -17,20 +17,25 @@
 
   </mat-toolbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
+    <mat-drawer mode="side" opened class="color2">
         <mat-selection-list #shoes [multiple]="false">
+
             <mat-list-option>
-                <a mat-button [routerLink]="['/admin']">Dashboard</a>
+                <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
             </mat-list-option>
+
             <mat-list-option>
-              <a mat-button [routerLink]="['/admin/pisos']">Pisos</a>
+              <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
             </mat-list-option>
+
             <mat-list-option>
-              <a mat-button [routerLink]="['/admin/pared']">Paredes</a>
+              <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
             </mat-list-option>
+
             <mat-list-option>
-              <a mat-button [routerLink]="['/admin/lucesemidirectas']">lucesemidirectas</a>
+              <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
             </mat-list-option>
+
          </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content>

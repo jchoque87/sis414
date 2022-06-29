@@ -1,6 +1,5 @@
 import { ParedService } from './../../paredes/sub/sercices/pared.service';
-import { Component, OnInit } from '@angular/core';
-import {  Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
@@ -35,13 +34,13 @@ export class ParedesAdminComponent implements OnInit {
 
   displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
   dataSource:   any[] = [];
-  name:         any = "";
-  decor:    any = "";
-  desing:       any = "";
-  place:          any = "";
-  details:        any = "";
-  borrar:          any="";
-  actualizar:          any="";
+  name:         any ="";
+  decor:        any ="";
+  desing:       any ="";
+  place:        any ="";
+  details:      any ="";
+  borrar:       any ="";
+  actualizar:   any ="";
 
   constructor(private pared: ParedService, public dialog: MatDialog) { }
 
@@ -77,7 +76,7 @@ export class ParedesAdminComponent implements OnInit {
 
   deleteData(key:string){
     console.log(key);
-   this.pared.deleteUser(key).subscribe(data =>{
+    this.pared.deleteUser(key).subscribe(data =>{
      console.log(data);
     }, error =>{
        console.error(error);
@@ -85,7 +84,7 @@ export class ParedesAdminComponent implements OnInit {
   }
 
   addUser(){
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialogAdd, {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogAdd1, {
       width: '300px',
       data: {
         name: this.name,
@@ -103,7 +102,7 @@ export class ParedesAdminComponent implements OnInit {
   }
 
   editUser(row:any){
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog1, {
       width: '700px',
       height:'400px',
       data: row,
@@ -121,9 +120,9 @@ export class ParedesAdminComponent implements OnInit {
   selector: 'example-dialog',
   templateUrl: 'example-dialog.html',
 })
-export class DialogOverviewExampleDialog {
+export class DialogOverviewExampleDialog1 {
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog1>,
     @Inject(MAT_DIALOG_DATA) public data: UserData,
     private pared: ParedService,
   ) {}
@@ -146,9 +145,9 @@ export class DialogOverviewExampleDialog {
   selector: 'addUser',
   templateUrl: 'addUser.html',
 })
-export class DialogOverviewExampleDialogAdd {
+export class DialogOverviewExampleDialogAdd1 {
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog1>,
     @Inject(MAT_DIALOG_DATA) public data: UserData,
     private pared: ParedService,
   ) {}
@@ -157,9 +156,6 @@ export class DialogOverviewExampleDialogAdd {
     this.dialogRef.close();
   }
   addUser():void{
-
     this.dialogRef.close();
   }
 }
-
-
