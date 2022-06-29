@@ -1,5 +1,5 @@
 <h1 mat-dialog-title id="h1">Editar Usuario</h1>
-<div mat-dialog-content id="dialog">
+<mat-dialog-content id="dialog">
   <mat-form-field appearance="fill">
     <mat-label>NOMBRE CLIENTE</mat-label>
     <input matInput [(ngModel)]="data.name">
@@ -20,8 +20,8 @@
     <mat-label> DETALLES EXTRAS</mat-label>
     <input matInput [(ngModel)]="data.details">
   </mat-form-field>
-</div>
-<div mat-dialog-actions>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
   <button mat-button (click)="onNoClick()">Cerrar</button>
   <button mat-button (click)="updateUser()">Guardar</button>
-</div>
+</mat-dialog-actions>
