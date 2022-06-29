@@ -2,7 +2,7 @@
 
 .u-section-2 {
   background-image: none;
-  background-color: #4c7397;
+  background-color: #385d81;
 }
 
 .u-section-2 .u-sheet-1 {
@@ -15,7 +15,7 @@
   object-position: 50% 100%;
   background-position: 50% 100%;
   margin: -65px 0px auto 233px;
-  margin-top: -56px;
+  margin-top: -5px;
   margin-left: 467px;
   margin-right: auto;
   margin-bottom: initial;
@@ -27,7 +27,6 @@
 
 .u-layout-row{
   display: flex;
-  padding-top: 40px;
   padding-left: 202px;
 }
 

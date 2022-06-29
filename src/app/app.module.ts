@@ -58,6 +58,11 @@ import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { MatTreeModule } from '@angular/material/tree';
+
+import { DialogOverviewExampleDialog1 } from './admin/paredes-admin/paredes-admin.component';
+import { DialogOverviewExampleDialogAdd1 } from './admin/paredes-admin/paredes-admin.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
@@ -96,6 +101,11 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
+    DialogOverviewExampleDialog,
+    DialogOverviewExampleDialogAdd,
+    DialogOverviewExampleDialogAdd1,
+    DialogOverviewExampleDialog1,
+
   ],
   imports: [
     BrowserModule,
@@ -122,6 +132,8 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatTreeModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
