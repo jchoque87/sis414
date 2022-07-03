@@ -1,0 +1,41 @@
+.u-section-4 {
+  background-image: url(../../../../assets/img/412.jpg);
+  background-position: 50% 50%;
+  background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  min-height: 748px;
+}
+
+.u-section-4 .u-group-1 {
+  width: 987px;
+  min-height: 259px;
+
+}
+.u-section-4 .u-container-layout-1 {
+  padding-left: 250px;
+  padding-top: 446px;
+}
+.u-section-4 .u-text-1{
+  margin: 20px 0 0;
+}
+.u-section-4 .u-link-1 {
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+  align-self: center;
+  margin: 20px auto 58px;
+}
+h1
+{
+  color: aliceblue;
+
+}
+.center{
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
