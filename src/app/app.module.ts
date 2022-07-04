@@ -59,6 +59,8 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -95,6 +97,8 @@ import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/l
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
+    IndexAdminComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -117,10 +121,11 @@ import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/l
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatTableModule,
+    MatTableModule, 
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
