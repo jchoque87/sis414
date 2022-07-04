@@ -1,22 +1,41 @@
 
 .color{
-  background-color: #385d81;
+  background-color: hsl(210, 38%, 45%);
 }
 /*#4c7397*/
 .example-card {
-  max-width:300px;
-  background-color:  #d9d9d9;
+  max-width: 300px;
+  background-color: #d9d9d9;
+  border-style: outset;
 }
 
 .bot{
   background-color: #385d81;
 }
 
-.p{
- color:  #d9d9d9;
+mat-card-content{
+ font-family: 'Gill Sans';
+ font-size: 20px;
+
+}
+.texnombre{
+  font-family: 'Gill Sans';
+  font-size: 31px;
 }
 h1{
   color: #d9d9d9;
-  padding-left: 515px;
-    padding-top: 50px;
+  padding-left: 400px;
+  padding-top: 50px;
+  font-family: 'Gill Sans';
+  font-size: 45px;
+}
+img{
+  width: calc(100% + 0px);
+  margin: 0 0 35px 0px;
+  display: block;
+  overflow: hidden;
+}
+.example-header-image {
+  background-image: url('https://i.pinimg.com/originals/fc/7b/8a/fc7b8a830820b868dfa60eb831b74d2f.jpg');
+  background-size: cover;
 }

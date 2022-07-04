@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 })
 export class ParedService {
 
-  configUrl = "https://develop-paredes-angular-default-rtdb.firebaseio.com";
+  configUrl = "https://basepared-default-rtdb.firebaseio.com/";
 
   constructor(private http: HttpClient) { }
 

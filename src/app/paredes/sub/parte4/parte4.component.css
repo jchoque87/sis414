@@ -1,5 +1,5 @@
 .u-section-4 {
-  background-image: url(../../../../assets/img/412.jpg);
+  background-image: url(../../../../assets/img/412b.jpg);
   background-position: 50% 50%;
   background-position: center;
     background-position-x: center;
@@ -20,7 +20,9 @@
   padding-top: 446px;
 }
 .u-section-4 .u-text-1{
-  margin: 20px 0 0;
+  margin: -49px 0 0;
+  font-family: 'Gill Sans';
+  font-size: 54px;
 }
 .u-section-4 .u-link-1 {
   padding-bottom: 2px;

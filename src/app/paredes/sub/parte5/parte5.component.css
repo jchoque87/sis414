@@ -1,11 +1,11 @@
 .u-section-5 {
   background-image: none;
-  background-color:  #385d81;
+  background-color: hsl(210, 38%, 45%);;
 
 }
 
 .u-section-5 .u-sheet-1 {
-  min-height: 1352px;
+  min-height: 1252px;
 }
 
 .u-layout{
@@ -23,12 +23,17 @@
 }
 
 .u-section-5 .u-text-1 {
-  padding-left: 221px;
-  padding-top: 50px;
+  padding-left: 30px;
+  padding-top: 41px;
+  font-family: 'Gill Sans';
+  font-size: 50px;
 }
 
 .u-section-5 .u-text-2 {
-  margin: 25px 20px 0;
+  margin: 31px -206px 0;
+  font-family: 'Gill Sans';
+  font-size: 21px;
+
 }
 
 
@@ -52,7 +57,15 @@
 }
 
 .u-section-5 .u-text-3 {
-  margin: -464px 468px 0 20px;
+  margin: 81px 446px 0 0;
+  font-family: 'Gill Sans';
+  font-size: 25px;
+
+}
+.u-text-4{
+  margin: -455px 0 0 0;
+  font-family: 'Gill Sans';
+  font-size: 31px;
 }
 h1{
   color: aliceblue;

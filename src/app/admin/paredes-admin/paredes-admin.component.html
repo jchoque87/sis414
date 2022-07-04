@@ -70,16 +70,15 @@
       </ng-container>
 
       <ng-container matColumnDef="actualizar">
-      <th mat-header-cell *matHeaderCellDef></th>
       <th mat-header-cell *matHeaderCellDef>
       <button mat-icon-button color="primary" aria-label="Editar" (click)="addUser()">
-        <mat-icon>edit</mat-icon>
+        <mat-icon class="col">edit</mat-icon>
       </button>
       </th>
 
       <td mat-cell *matCellDef="let element">
       <button mat-icon-button color="primary" aria-label="Editar" (click)="editUser(element)" id="button_edit">
-      <mat-icon>edit</mat-icon>
+      <mat-icon >edit</mat-icon>
       </button>
       </td>
       </ng-container>

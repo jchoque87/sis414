@@ -1,7 +1,6 @@
 
-
 .u-section-6 {
-  background-image: url(../../../../assets/img/11.jpg);
+  background-image: url(../../../../assets/img/11b.jpg);
   background-position: 50% 50%;
   background-position: center;
     background-position-x: center;
@@ -9,5 +8,41 @@
   background-size:cover;
   background-repeat: no-repeat;
   background-origin: content-box;
-  min-height: 748px;
+  min-height: 800px;
+}
+
+.u-section-6 .u-group-1 {
+  width: 987px;
+  min-height: 259px;
+
+}
+.u-section-6 .u-container-layout-1 {
+  padding-left: 250px;
+  padding-top: 446px;
+}
+.u-section-6 .u-text-1{
+  margin: -60px 0 0;
+  font-family: 'Gill Sans';
+  font-size: 40px;
+
+}
+.u-section-6 .u-link-1 {
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+  align-self: center;
+  margin: 20px auto 58px;
+}
+h1
+{
+  color: aliceblue;
+
+}
+.center{
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.u-section-6 .u-sheet-1 {
+  min-height: 800px;
 }
