@@ -10,61 +10,38 @@ import{ Persona } from "src/app/models/persona";
 })
 export class LucesSemidirectasService {   
 
-  /*configUrl = "https://registro-luces-semidirectas-default-rtdb.firebaseio.com";*/
-  configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com";
+  configUrl = "https://registro-luces-semidirectas-default-rtdb.firebaseio.com/";
+  /*configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com";*/
   
   constructor(private http: HttpClient) { }
 
   getUsers(){
-    console.log(this.configUrl+"/users.json");
-    return this.http.get<any>(this.configUrl+"/users.json");
+    console.log(this.configUrl+"/user.json");
+    return this.http.get<any>(this.configUrl+"/user.json");
 
   } 
   addUser(data:any){
-    return this.http.post<any>(this.configUrl+"/users.json",data);
+    return this.http.post<any>(this.configUrl+"/user.json",data);
   } 
   
   deleteUser(key:any){
-    let url= `${this.configUrl}/users/${key}.json`;
+    let url= `${this.configUrl}/user/${key}.json`;
     return this.http.delete<any>(url).pipe(map(res =>{
       console.log(url);
       console.log(res);
          return res;
     }))
   }
-  personaArray: Persona[] = [
-    
-  ];
-  
 
-  //Variable para ngModel 
-  selectedPersona: Persona= new Persona(0,"","",0);
-
-  addOrEdit(){
-    if(this.selectedPersona.id === 0){
-      this.selectedPersona.id=this.personaArray.length+1;
-      this.personaArray.push(this.selectedPersona);
+  updateUser(data:any){
+    let url= `${this.configUrl}/user/${data.id}.json`;
+    const requestData = {
+      name: data.name,
+      job: data.job,
+      superficie:data.superficie,
+      costo:data.costo,
+      envio:data.envio
     }
-    this.selectedPersona=new Persona(this.selectedPersona.id,this.selectedPersona.name,this.selectedPersona.country,this.selectedPersona.ci);
-    this.selectedPersona.name="";
-    this.selectedPersona.country="";
-    this.selectedPersona.ci=0;
-
-    
-  }
-
-  editar(persona: Persona){
-    this.selectedPersona=persona;
-  }
-
-  delete(){
-    if(confirm("Estas seguro de eliminar esto?"))
-    {
-      this.personaArray = this.personaArray.filter(x => x!= this.selectedPersona);
-      this.selectedPersona.name="";
-      this.selectedPersona.country="";
-      this.selectedPersona.ci=0;
-    }
-    console.log(this.personaArray);
-  }
+    return this.http.put<any>(url, requestData);
+  } 
 }

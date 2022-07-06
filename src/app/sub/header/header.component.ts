@@ -15,11 +15,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   logout(){
     this.authService.logout().subscribe(()=>{
       this.router.navigate(['']);
     });
 
   }
-
 }

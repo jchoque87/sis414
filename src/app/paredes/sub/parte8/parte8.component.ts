@@ -1,20 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ParedService } from '../sercices/pared.service';
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
-export class GridListDynamicExample {
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
-}
 
 
 @Component({
@@ -24,15 +10,6 @@ export class GridListDynamicExample {
 })
 
 export class Parte8Component implements OnInit {
-
-  tabLoadTimes: Date[] = [];
-  getTimeLoaded(index: number) {
-    if (!this.tabLoadTimes[index]) {
-      this.tabLoadTimes[index] = new Date();
-    }
-    return this.tabLoadTimes[index];
-  }
-
 
 
   displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
@@ -88,6 +65,5 @@ export class Parte8Component implements OnInit {
        console.error(error);
     });
   }
-
 }
 

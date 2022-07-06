@@ -14,10 +14,10 @@ export class ParedService {
   getUsers() {
     return this.http.get<any>(this.configUrl+"/users.json");
   }
+
   addUser(data:any){
     return this.http.post<any>(this.configUrl+"/users.json",data);
   }
-
 
   deleteUser(key:any){
     let url= `${this.configUrl}/users/${key}.json`;
@@ -26,6 +26,18 @@ export class ParedService {
       console.log(res);
          return res;
     }))
+  }
+
+  updateUser(data:any){
+    let url= `${this.configUrl}/user/${data.id}.json`;
+    const requestData = {
+      name:data.name,
+      decor:data.decor,
+      desing:data.desing,
+      place:data.place,
+      details:data.details
+    }
+    return this.http.put<any>(url, requestData);
   }
 
 

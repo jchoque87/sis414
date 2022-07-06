@@ -8,10 +8,13 @@ import { LucesSemidirectasService } from '../services/luces-semidirectas.service
   
 })
 export class LucesSemidirectasComponent implements OnInit {
-  displayedColumns: string[] = ['job', 'name','Botones','Botones2'];
+  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones','Botones2'];
   dataSource: any[] = [];
   nombre:  any = "";
   trabajo: any = "";
+  superficies: any =" ";
+  Precio:any ="";
+  tenvio:any="";
   Botones: any= "";
   Botones2: any= "";
 
@@ -24,7 +27,10 @@ export class LucesSemidirectasComponent implements OnInit {
           const newData={
             id: key,
             job:data[key].job,
-            name:data[key].name
+            name:data[key].name,
+            superficie:data[key].superficie,
+            costo:data[key].costo,
+            envio:data[key].envio
           }
           return newData });
         
@@ -34,7 +40,10 @@ export class LucesSemidirectasComponent implements OnInit {
   SaveData(){
     const data = {
       "name": this.nombre,
-      "job": this.trabajo
+      "job": this.trabajo,
+      "superficie":this.superficies,
+      "costo":this.Precio,
+      "envio":this.tenvio
     };    
     this.lucesemidirectas.addUser(data).subscribe(
       (data: any) => {

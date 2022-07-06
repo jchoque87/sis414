@@ -47,12 +47,16 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
+
+import { TableComponent } from './table/table.component';
+
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+
 import { MachimbresComponent } from './machimbres/machimbres.component';
 import {MatMenuModule} from '@angular/material/menu';
 
@@ -64,6 +68,18 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { HotToastModule } from '@ngneat/hot-toast';
 
+import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
+import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTreeModule } from '@angular/material/tree';
+
+import { DialogOverviewExampleDialog1 } from './admin/paredes-admin/paredes-admin.component';
+import { DialogOverviewExampleDialogAdd1 } from './admin/paredes-admin/paredes-admin.component';
+import { MatStepperModule } from '@angular/material/stepper';
+
+import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
 
 @NgModule({
@@ -100,7 +116,14 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MachimbresComponent,
     MachimbresAdminComponent,
     SignUpComponent,
-
+    ParedesAdminComponent,
+    LucesemidirectasAdminComponent,
+    TableComponent,
+    IndexAdminComponent,
+    DialogOverviewExampleDialog,
+    DialogOverviewExampleDialogAdd,
+    DialogOverviewExampleDialogAdd1,
+    DialogOverviewExampleDialog1,
   ],
   imports: [
     BrowserModule,
@@ -123,7 +146,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatTableModule,
+    MatTableModule, 
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
@@ -133,6 +156,9 @@ import { HotToastModule } from '@ngneat/hot-toast';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     HotToastModule.forRoot()
+    MatMenuModule,
+    MatTreeModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
