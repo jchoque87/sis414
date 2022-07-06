@@ -20,53 +20,29 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
+    <button  mat-icon-button routerLink='' at-icon-button  class = "icono-de-ejemplo"  >
+      <mat-icon >close</mat-icon >
+    </button>
 
-    <!--LOGIN-->
-    <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
-      <button mat-button [matMenuTriggerFor]="userMenu">  
-        <mat-icon>account_circle</mat-icon>
-        {{user.displayName}}
-        <mat-icon>expand_more</mat-icon>
-      </button>
-    </ng-container>
-    <ng-template #loginButton class="login-icon">
-      <button mat-button  routerLink="/login">  
-        <mat-icon>login</mat-icon>
-        Iniciar sesion
-      </button>
-    </ng-template>
-    <mat-menu #userMenu="matMenu">
-      <button mat-menu-item (click)="logout()">Cerrar Sesion</button>
-    </mat-menu>
+
   </mat-toolbar>
-
-
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class="colo2">
-            <mat-selection-list #shoes [multiple]="false">
-    
-                <mat-list-option>
-                    <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
-                </mat-list-option>
-    
-                <mat-list-option>
-                  <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
-                </mat-list-option>
-    
-                <mat-list-option>
-                  <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
-                </mat-list-option>
-    
-                <mat-list-option>
-                  <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
-                </mat-list-option>
-
-                <mat-list-option>
-                  <a mat-button [routerLink]="['/admin/machimbres']"><mat-icon>highlight</mat-icon>machimbres</a>
-                </mat-list-option>
-    
-             </mat-selection-list>
-        </mat-drawer>
+    <mat-drawer mode="side" opened class="color2">
+        <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option>
+                <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
+            </mat-list-option>
+            <mat-list-option>
+              <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
+            </mat-list-option>
+            <mat-list-option>
+              <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
+            </mat-list-option>
+            <mat-list-option>
+              <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
+            </mat-list-option>
+          </mat-selection-list>
+    </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>
     </mat-drawer-content>

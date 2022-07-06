@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 
-import{ Persona } from "src/app/models/persona";
-
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +30,6 @@ export class LucesSemidirectasService {
          return res;
     }))
   }
-
   updateUser(data:any){
     let url= `${this.configUrl}/user/${data.id}.json`;
     const requestData = {
