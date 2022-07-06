@@ -1,0 +1,21 @@
+.example-container {
+    width: 99%;
+    height: 40%;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    height:100%;
+    background-color: #5083b6;
+}
+
+.example-spacer {
+  flex : 1  1 auto;
+}
+
+.color2{
+  background-color: #d9e6f2;
+}
+a{
+  color: #385d81;
+}
+
+
