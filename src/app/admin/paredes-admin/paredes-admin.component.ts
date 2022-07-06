@@ -104,7 +104,6 @@ export class ParedesAdminComponent implements OnInit {
   editUser(row:any){
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog1, {
       width: '700px',
-      height:'400px',
       data: row,
     });
 

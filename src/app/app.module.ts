@@ -58,6 +58,8 @@ import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
 
 import { DialogOverviewExampleDialog1 } from './admin/paredes-admin/paredes-admin.component';
@@ -111,11 +113,11 @@ import { environment } from '../environments/environment';
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
+    IndexAdminComponent,
     DialogOverviewExampleDialog,
     DialogOverviewExampleDialogAdd,
     DialogOverviewExampleDialogAdd1,
     DialogOverviewExampleDialog1,
-  
   ],
   imports: [
     BrowserModule,
@@ -138,10 +140,11 @@ import { environment } from '../environments/environment';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatTableModule,
+    MatTableModule, 
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatMenuModule,
     MatTreeModule,
     MatStepperModule,
     
