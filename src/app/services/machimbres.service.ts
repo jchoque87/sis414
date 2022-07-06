@@ -2,28 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 
-import{ Persona } from "src/app/models/persona";
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class LucesSemidirectasService {   
+export class MachimbresService {
 
-  configUrl = "https://registro-luces-semidirectas-default-rtdb.firebaseio.com/";
-  /*configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com";*/
-  
+  configUrl = "https://machimbres-774b9-default-rtdb.firebaseio.com/";
+
   constructor(private http: HttpClient) { }
 
-  getUsers(){
+ getUsers(){
     console.log(this.configUrl+"/user.json");
     return this.http.get<any>(this.configUrl+"/user.json");
 
   } 
   addUser(data:any){
     return this.http.post<any>(this.configUrl+"/user.json",data);
-  } 
-  
+  }
   deleteUser(key:any){
     let url= `${this.configUrl}/user/${key}.json`;
     return this.http.delete<any>(url).pipe(map(res =>{
@@ -32,16 +27,4 @@ export class LucesSemidirectasService {
          return res;
     }))
   }
-
-  updateUser(data:any){
-    let url= `${this.configUrl}/user/${data.id}.json`;
-    const requestData = {
-      name: data.name,
-      job: data.job,
-      superficie:data.superficie,
-      costo:data.costo,
-      envio:data.envio
-    }
-    return this.http.put<any>(url, requestData);
-  } 
 }

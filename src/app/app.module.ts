@@ -56,6 +56,18 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+
+import { MachimbresComponent } from './machimbres/machimbres.component';
+import {MatMenuModule} from '@angular/material/menu';
+
+import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
+
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
@@ -68,6 +80,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -100,6 +113,9 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    MachimbresComponent,
+    MachimbresAdminComponent,
+    SignUpComponent,
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
@@ -134,6 +150,12 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatIconModule,
+    MatMenuModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot()
     MatMenuModule,
     MatTreeModule,
     MatStepperModule,
