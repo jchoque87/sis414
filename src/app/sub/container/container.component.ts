@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { TableComponent } from 'src/app/table/table.component';
-
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -19,4 +18,5 @@ export class ContainerComponent implements OnInit {
       width: '30%'
     });
   }
+  
 }
