@@ -13,6 +13,10 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { MachimbresComponent } from './machimbres/machimbres.component';
+import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
+
 
 
 
@@ -21,11 +25,13 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'paredes', component: ParedesComponent },
   { path: 'muebles_dormitorio', component: MueblesDormitorioComponent},
+  { path: 'machimbres', component: MachimbresComponent},
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
-
-  { path: 'admin',component: DashboardComponent, 
+  { path: 'sign-up', component: SignUpComponent},
+  
+  { path: 'admin',component: LoginComponent, 
     children: [
       {
         path:  '',
@@ -34,12 +40,18 @@ const routes: Routes = [
       {
         path:  'pisos',
         component:  PisosAdminComponent
-      }
+      },
+      {
+        path:  'machimbres',
+        component:  MachimbresAdminComponent
+      },
+      { path: 'dashboard', component: DashboardComponent }
     ]
   },
   { path: '**', component: NofoundComponent },
 
-  { path: 'machimbres', component: MachimbresComponent},
+ 
+ 
 ];
 
 @NgModule({

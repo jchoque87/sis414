@@ -56,6 +56,14 @@ import { MainAdminComponent } from './admin/main-admin/main-admin.component';
 import { MachimbresComponent } from './machimbres/machimbres.component';
 import {MatMenuModule} from '@angular/material/menu';
 
+import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
+
 
 
 @NgModule({
@@ -90,7 +98,9 @@ import {MatMenuModule} from '@angular/material/menu';
     PisosAdminComponent,
     MainAdminComponent,
     MachimbresComponent,
-    
+    MachimbresAdminComponent,
+    SignUpComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -118,7 +128,11 @@ import {MatMenuModule} from '@angular/material/menu';
     MatTabsModule,
     MatDialogModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

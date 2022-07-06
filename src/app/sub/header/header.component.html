@@ -1,44 +1,27 @@
-<mat-toolbar color="primary">
-    <div class="form">
-        <!--1-->
-        <span class="inicio">
-            <button class="boton" mat-button [matMenuTriggerFor]="menu"><h1>INICIO</h1></button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item><mat-icon>home</mat-icon>HOME</button>
-            </mat-menu>
-        </span>
-        
-            <!--2-->
-        <button class="boton2" mat-button [matMenuTriggerFor]="aboveMenu"><h1>LUCES</h1></button>
-            <mat-menu #aboveMenu="matMenu" yPosition="above">
-            <button mat-menu-item>LUCES DIRECTA</button>
-            <button mat-menu-item>LUCES INDIRECTA</button>
-            <button mat-menu-item>LUCES SEMIDIRECTA</button>
-            <button mat-menu-item>SEMIINDIRECTAS</button>
-            </mat-menu>
-            <!--3-->
-        <button class="boton3" mat-button [matMenuTriggerFor]="belowMenu"><h1>MUEBLES</h1></button>
-            <mat-menu #belowMenu="matMenu" yPosition="below">
-            <button mat-menu-item>OFICINA</button>
-            <button mat-menu-item>SALA</button>
-            <button mat-menu-item>DORMITORIO</button>
-            </mat-menu>
-            <!--4-->
-        <button class="boton4" mat-button [matMenuTriggerFor]="beforeMenu"><h1>PISOS</h1></button>
-            <mat-menu #beforeMenu="matMenu" xPosition="before">
-            <button mat-menu-item>MACHIMBRES</button>
-            <button mat-menu-item>CERAMICA</button>
-            </mat-menu>
-            <!--5-->
-         <button class="boton5" mat-button [matMenuTriggerFor]="afterMenu"><h1>CONTACTO</h1></button>
-            <mat-menu #afterMenu="matMenu" xPosition="after">
-            <button mat-menu-item>UATF</button>
-            <button mat-menu-item>TECNOLOGIAS</button>
-            </mat-menu>  
-        
-        <span class="users">
-            <button class="boton" mat-button="menu"><h2>USUARIO <mat-icon>face</mat-icon></h2></button>
-        </span>
-        
-    </div>
-</mat-toolbar>
+<header>
+    <div id="uno">
+        <br>
+    <h1>Casa Diseño</h1>
+     </div>
+     <link rel="stylesheet" href="header.component.css">
+     <section>
+      <div class="example-button-row">
+       <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['']" >Menu principal</a>
+        <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['/paredes']">Paredes</a>
+        <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['/pisos']">Pisos</a>
+        <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['/muebles_dormitorio']" >Muebles</a>
+        <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['/lucessemidirectas']">luces</a>
+        <img src="../../../assets/img/zarla1.png">
+        <a mat-button [routerLink]="['/contacto']">Contacto</a>
+
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+
+        </button>
+      </div>
+  </section>
+</header>
