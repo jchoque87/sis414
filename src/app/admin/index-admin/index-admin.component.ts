@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { PisosService } from '../services/pisos.service';
+import { IndexService } from 'src/app/services/index-service';
 
 @Component({
-  selector: 'app-pisos',
-  templateUrl: './pisos.component.html',
-  styleUrls: ['./pisos.component.css']
+  selector: 'app-index-admin',
+  templateUrl: './index-admin.component.html',
+  styleUrls: ['./index-admin.component.css']
 })
-export class PisosComponent implements OnInit {
-
+export class IndexAdminComponent implements OnInit {
   displayedColumns: string[] = ['job', 'name'];
   dataSource: any[] = [];
   nombre:  any = "";
   trabajo: any = "";
 
-  constructor(private pisos: PisosService) { }
+  constructor(private index: IndexService) { }
 
   ngOnInit(): void {
-    this.pisos.getUsers().subscribe(
+    this.index.getUsers().subscribe(
       (data: any) => {
         this.dataSource = Object.keys(data).map((key) => { return data[key] });
       })
@@ -29,7 +26,7 @@ export class PisosComponent implements OnInit {
       "name": this.nombre,
       "job": this.trabajo
     };    
-    this.pisos.addUser(data).subscribe(
+    this.index.addUser(data).subscribe(
       (data: any) => {
         console.log(data);
       })

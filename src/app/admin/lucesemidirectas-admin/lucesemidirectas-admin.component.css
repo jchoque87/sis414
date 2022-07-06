@@ -51,7 +51,6 @@ mat-form-field{
 }
 #button_delete_name{
         align-content: center;
-
 }
 #button_edit:hover{
         box-shadow: 0 0 10px rgb(255, 255, 255),
@@ -59,4 +58,14 @@ mat-form-field{
                     0 0 70px  rgb(23, 119, 143),
                     0 0 130px rgb(22, 21, 82);
 }
-
+/*boton de registrar*/
+.button_register{
+    background-color: rgb(14, 59, 143);
+    color:white;
+    width: 100%;
+    border-radius: 0%;
+}
+.button_register:hover{
+        background-color: white;
+        color: black;
+}

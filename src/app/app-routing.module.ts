@@ -25,9 +25,9 @@ const routes: Routes = [
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
-
-  { path: 'admin',component: DashboardComponent,
-    children: [
+  { path: 'admin', component:DashboardComponent,
+      
+    children:[
       {
         path:  '',
         component:  MainAdminComponent
@@ -45,11 +45,11 @@ const routes: Routes = [
         component: LucesemidirectasAdminComponent
       }
     ]
+   
   },
-  { path: '**', component: NofoundComponent }
 ];
 
-@NgModule({
+ @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

@@ -154,6 +154,17 @@ main>h4{
     flex-flow: column nowrap;
     align-items:flex-start;
     justify-content: center;
+    
+     
+}
+.item-int:hover{
+    
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4)
+  
 }
 .item-int>img{
     width:200px;
@@ -175,6 +186,7 @@ main>h4{
     margin: 5px;
     font-style: italic;
 }
+
 
 /*laptops*/
 @media(min-width:1024px){
@@ -206,6 +218,14 @@ main>h4{
      }
      #productos>div{
          flex: 1 1 25%;
+     }
+     #btn:hover{
+        
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
      }
      .item{
        flex: 1 1 10%;

@@ -8,6 +8,7 @@ import { map } from 'rxjs';
 })
 export class LucesSemidirectasService {
 
+
   configUrl = "https://basepared-default-rtdb.firebaseio.com/ ";
   /*configUrl = "https://registro-luces-semidirectas-default-rtdb.firebaseio.com/";*/
   /*configUrl = "https://decoracionesinteriores-cb418-default-rtdb.firebaseio.com";*/
