@@ -67,6 +67,17 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
+//Firebase
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from
+'@angular/fire/compat/storage';
+import { AngularFirestoreModule } from
+'@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from
+'@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +86,6 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     PuertasComponent,
     NofoundComponent,
     MainComponent,
-
     AsideComponent,
     MueblesDormitorioComponent,
     LucesSemidirectasComponent,
@@ -105,7 +115,7 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     DialogOverviewExampleDialogAdd,
     DialogOverviewExampleDialogAdd1,
     DialogOverviewExampleDialog1,
-
+  
   ],
   imports: [
     BrowserModule,
@@ -134,6 +144,7 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     MatDialogModule,
     MatTreeModule,
     MatStepperModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

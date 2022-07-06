@@ -1,5 +1,6 @@
-<h1 mat-dialog-title id="h1">Editar Usuario</h1>
-<div mat-dialog-content id="dialog">
+
+<h1 mat-dialog-title >REGISTRAR PRODUCTO LUCES-SEMIDIRECTA</h1>
+<div mat-dialog-content>
   <mat-form-field appearance="fill">
     <mat-label>Moldura</mat-label>
     <input matInput [(ngModel)]="data.name">
@@ -20,8 +21,10 @@
     <mat-label> entregas</mat-label>
     <input matInput [(ngModel)]="data.envio"> 
   </mat-form-field>
+    
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cerrar</button>
-  <button mat-button (click)="updateUser()">Guardar</button>
+<div mat-dialog-actions  >
+  <button mat-button  (click)="onNoClick()">Cerrar</button>
+  <button mat-button  (click)="SaveData()">Registrar</button>
+  
 </div>
