@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ParedesComponent } from './paredes/paredes.component';
-import { FlooteComponent } from './paredes/sub/floote/floote.component';
-import { Parte1Component } from './paredes/sub/parte1/parte1.component';
 import { Parte2Component } from './paredes/sub/parte2/parte2.component';
 import { Parte3Component } from './paredes/sub/parte3/parte3.component';
 import { Parte4Component } from './paredes/sub/parte4/parte4.component';
@@ -69,6 +67,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
+
 //Firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -93,8 +92,6 @@ import { environment } from '../environments/environment';
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
-    FlooteComponent,
-    Parte1Component,
     Parte2Component,
     Parte3Component,
     Parte4Component,
@@ -118,6 +115,7 @@ import { environment } from '../environments/environment';
     DialogOverviewExampleDialogAdd,
     DialogOverviewExampleDialogAdd1,
     DialogOverviewExampleDialog1,
+
   ],
   imports: [
     BrowserModule,

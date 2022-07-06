@@ -2,7 +2,6 @@ import { ParedService } from './../../paredes/sub/sercices/pared.service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-
 export interface UserData {
   id: string;
   name: string;
@@ -12,15 +11,13 @@ export interface UserData {
   details:string;
 }
 
-
-
 @Component({
   selector: 'app-paredes-admin',
   templateUrl: './paredes-admin.component.html',
   styleUrls: ['./paredes-admin.component.css']
 })
-export class ParedesAdminComponent implements OnInit {
 
+export class ParedesAdminComponent implements OnInit {
 
   tabLoadTimes: Date[] = [];
   getTimeLoaded(index: number) {
@@ -30,9 +27,7 @@ export class ParedesAdminComponent implements OnInit {
     return this.tabLoadTimes[index];
   }
 
-
-
-  displayedColumns: string[] = ['name','decor','desing','place', 'details','actualizar','borrar'];
+  displayedColumns: string[] = ['name','decor','desing','place', 'details','editar','borrar'];
   dataSource:   any[] = [];
   name:         any ="";
   decor:        any ="";
@@ -40,7 +35,7 @@ export class ParedesAdminComponent implements OnInit {
   place:        any ="";
   details:      any ="";
   borrar:       any ="";
-  actualizar:   any ="";
+  editar:       any ="";
 
   constructor(private pared: ParedService, public dialog: MatDialog) { }
 
@@ -94,11 +89,9 @@ export class ParedesAdminComponent implements OnInit {
         detalles:this.details
       },
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
-
   }
 
   editUser(row:any){
@@ -111,7 +104,6 @@ export class ParedesAdminComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
-
 }
 
 
@@ -146,14 +138,17 @@ export class DialogOverviewExampleDialog1 {
 })
 export class DialogOverviewExampleDialogAdd1 {
   constructor(
+
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog1>,
     @Inject(MAT_DIALOG_DATA) public data: UserData,
     private pared: ParedService,
   ) {}
 
+
   onNoClick(): void {
     this.dialogRef.close();
   }
+
   addUser():void{
     this.dialogRef.close();
   }

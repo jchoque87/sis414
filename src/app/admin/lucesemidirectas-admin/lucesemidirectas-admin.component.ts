@@ -17,7 +17,7 @@ export interface UserData {
   styleUrls: ['./lucesemidirectas-admin.component.css']
 })
 export class LucesemidirectasAdminComponent implements OnInit {
-  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones','Botones2'];
+  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones2' ,'Botones'];
   dataSource: any[] = [];
   nombre:  any = "";
   trabajo: any = "";
