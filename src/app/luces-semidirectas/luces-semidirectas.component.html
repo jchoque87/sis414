@@ -1,4 +1,6 @@
 <app-header></app-header> 
+
+
 <mat-card class="example-card">  
   <img mat-card-image src="https://i.pinimg.com/474x/22/5e/0b/225e0b7790c4271038f23f1d41e4629c--blue-led-lights-home-theater.jpg" alt="Photo of a Shiba Inu" id="img-one">
   <p>LUCES</p> <BR>
@@ -33,7 +35,7 @@
       <span>
         <mat-card class="example-card1">
             <h1 id="tittle">LA DECORACION</h1>
-            <img mat-card-image src="https://3.bp.blogspot.com/-mFB82U3KYd8/VjgaSaMn11I/AAAAAAAACHI/SM6WU4Jw-kY/s1600/instalaciones-electricas-residenciales-%2Biluminacion%2Bsemiindirecta.jpg" alt="Photo of a Shiba Inu" id="img"> 
+            <img mat-card-image src="https://3.bp.blogspot.com/-mFB82U3KYd8/VjgaSaMn11I/AAAAAAAACHI/SM6WU4Jw-kY/s1600/instalaciones-electricas-residenciales-%2Biluminacion%2Bsemiindirecta.jpg" alt="Photo of a Shiba Inu" id="photo"> 
             <mat-card-content>
               <p id="dec_parr">
                 ¡Y a iluminar la casa! Ahora que ya conoces todos los tipos y estilos de iluminación que existen,<br> 
@@ -43,53 +45,56 @@
               </p>
             </mat-card-content>
           </mat-card>
+          
     </span>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-grid-list  cols="2" rowHeight="1:1">
-    <mat-grid-tile><img src="https://casaydiseno.com/wp-content/uploads/2015/04/iluminacion-led-sillas-lamparas.jpg " id="img-two"> </mat-grid-tile>
-    <mat-grid-tile >
-        <mat-card >
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image1"><img src="https://www.lampamania.es/ImgGalery/Img1/Clanky/aktuality-home/barva_svetla.jpg" alt="" width="50px" height="50px" id="h"></div>
-              <mat-card-title>BEDROOM DESIGN</mat-card-title>
-              <mat-card-subtitle>Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</mat-card-subtitle>
-            </mat-card-header>
-
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"><img src="https://www.lampamania.es/ImgGalery/Img1/Clanky/aktuality-home/barva_svetla.jpg" alt="" width="50px" height="50px" id="h"></div>
-                <mat-card-title>KITCHEN DESIGN</mat-card-title>
-                <mat-card-subtitle>Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</mat-card-subtitle>
-              </mat-card-header>
-
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"><img src="https://www.lampamania.es/ImgGalery/Img1/Clanky/aktuality-home/barva_svetla.jpg" alt="" width="50px" height="50px" id="h"></div>
-                <mat-card-title>KIDS ROOM DESIGN</mat-card-title>
-                <mat-card-subtitle>Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</mat-card-subtitle>
-              </mat-card-header>
-        </mat-card>
-
-    </mat-grid-tile>
+  <mat-grid-tile><img src="https://casaydiseno.com/wp-content/uploads/2015/04/iluminacion-led-sillas-lamparas.jpg " id="img-two"> </mat-grid-tile>
+  <p id="card2_title1">Contactate con los expertos en diseño de interiores</p>
+  <mat-grid-tile >
+      <mat-card class="example-card2">
+        <mat-card-title-group>
+          <mat-card-title  id="card2_title">Diseñadora</mat-card-title>
+          <mat-card-subtitle>Delia Pereyra </mat-card-subtitle>
+          <img mat-card-sm-image src="https://static.vecteezy.com/system/resources/thumbnails/001/921/774/small/beautiful-woman-red-hair-in-frame-circular-avatar-character-free-vector.jpg"id="image_2" >
+        </mat-card-title-group>
+        <mat-card-content id="number">
+          contacto:5342737532
+        </mat-card-content>
+      </mat-card><br>
+   
+      <mat-card class="example-card2 " id="contac">
+        <mat-card-title-group>
+          <mat-card-title id="card2_title" >Diseñador</mat-card-title>
+          <mat-card-subtitle>Francisco Lopez</mat-card-subtitle>
+          <img mat-card-sm-image src="https://junglamoderna.com/wp-content/uploads/2019/02/esta-persona-no-exist-297x300.jpg" id="image_2">
+        </mat-card-title-group>
+        <mat-card-content id="number">
+          contacto:324234354
+        </mat-card-content>
+      </mat-card>
+     
+  </mat-grid-tile>
 </mat-grid-list>
 <br>
-<p>Una colección pensada en calidad y comodidad de tu hogar - compra y adquiere la oferta </p>
+<h1 id="title-offer">Una colección pensada en calidad y comodidad de tu hogar - compra y adquiere la oferta </h1>
 
-<mat-grid-list cols="3" rowHeight="2.5:2.5" >
+<mat-grid-list cols="3" rowHeight="2.5:3" >
   <mat-grid-tile *ngFor="let tile of dataSource" class="mat-grid-tile3" >
     <mat-card class="example-card3">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{tile.name}}</mat-card-title>
-        <mat-card-subtitle>{{tile.job}}</mat-card-subtitle>
+        <mat-card-title id="intitle">{{tile.name}}</mat-card-title>
+        <mat-card-subtitle id="subtitle">{{tile.job}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" id="imgen-matcard">
+      <img mat-card-image src="https://ae01.alicdn.com/kf/HTB1kR0JxL9TBuNjy1zbq6xpepXaL/Luces-LED-colgantes-modernas-para-comedor-l-mparas-coloridas-para-restaurante-caf-dormitorio-chico-l-mpara.jpg" alt="" id="imgen-matcard">
       <mat-card-content>
         <p id="mat-card-content-p">
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. </p>
+        <h4>{{tile.superficie}}</h4>
+        <h3>{{tile.costo}} <p id="enviosp">{{tile.envio}}</p></h3>
       </mat-card-content>
       <mat-card-actions>
         <button mat-button>LIKE</button>

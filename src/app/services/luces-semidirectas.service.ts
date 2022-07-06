@@ -30,4 +30,15 @@ export class LucesSemidirectasService {
          return res;
     }))
   }
+  updateUser(data:any){
+    let url= `${this.configUrl}/user/${data.id}.json`;
+    const requestData = {
+      name: data.name,
+      job: data.job,
+      superficie:data.superficie,
+      costo:data.costo,
+      envio:data.envio
+    }
+    return this.http.put<any>(url, requestData);
+  } 
 }
