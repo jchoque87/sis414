@@ -1,0 +1,41 @@
+.example-spacer {
+  flex : 1  1 auto;
+  text-align: center;
+
+
+}
+.tex{
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.center{
+  color :rgb(255, 255, 255);
+  top: 50%;
+  width: 100%;
+  padding-top: 400px;
+}
+.imagenfinal{
+  background-image: url(../../../../assets/img/1313.jpg);
+  height:500px;
+  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
+  background-size:cover;
+}
+a
+{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 17px;
+}
+a:hover
+{
+    color: var(--primary-color);
+}
+i
+{
+    padding: 0px 10px;
+}
+
