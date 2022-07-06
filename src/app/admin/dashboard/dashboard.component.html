@@ -3,9 +3,19 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span>Dashboard</span>
+    
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <span>Application Title</span>
+
+
       <mat-icon>favorite</mat-icon>
+
+
+
+
+
+
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
@@ -19,24 +29,19 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened class="color2">
         <mat-selection-list #shoes [multiple]="false">
-
             <mat-list-option>
                 <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
             </mat-list-option>
-
             <mat-list-option>
               <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
             </mat-list-option>
-
             <mat-list-option>
               <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
             </mat-list-option>
-
             <mat-list-option>
               <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
             </mat-list-option>
-
-         </mat-selection-list>
+          </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>
