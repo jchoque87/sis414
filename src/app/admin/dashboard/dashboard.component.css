@@ -1,3 +1,7 @@
+
+.mb-0{
+  font-size: 1rem;
+}
 .example-container {
     width: 99%;
     height: 40%;
@@ -12,10 +16,11 @@
 }
 
 .color2{
-  background-color: #d9e6f2;
+  background: -webkit-linear-gradient(to right, hsla(180, 79%, 48%, 0.26), hsla(240, 74%, 43%, 0.404), hsla(251, 49%, 47%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
+    background: linear-gradient(to right, hsla(180, 88%, 53%, 0.26), hsla(240, 64%, 57%, 0.404), hsla(249, 69%, 45%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
 }
 a{
-  color: #385d81;
+  color: #000000;
 }
 
 
