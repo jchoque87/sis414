@@ -1,85 +1,70 @@
 <div >
   <div class="colo" >
-    <mat-tab-group class="text">
-      <mat-tab  label= "HORA-FECHA">
+    <mat-tab-group class="text" animationDuration="2000ms">
+
+      <mat-tab  label= "Hora-Fecha" >
         <ng-template matTabContent>
           Potosi - Bolivia: {{getTimeLoaded(1) | date:'medium'}}
         </ng-template>
       </mat-tab>
     </mat-tab-group>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef><P>NOMBRE CLIENTE</P></th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="decor">
+      <th mat-header-cell *matHeaderCellDef> <P>COLORES</P></th>
+      <td mat-cell *matCellDef="let element"> {{element.decor}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="desing">
+      <th mat-header-cell *matHeaderCellDef><P>TIPO DICEÑO</P></th>
+      <td mat-cell *matCellDef="let element"> {{element.desing}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="place">
+      <th mat-header-cell *matHeaderCellDef><p>SITIO</p> </th>
+      <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef><p>DETALLES EXTRAS</p> </th>
+      <td mat-cell *matCellDef="let element"> {{element.details}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef>
+            <button mat-icon-button color="primary" aria-label="Editar" (click)="addUser()" >
+          <mat-icon>edit</mat-icon>
+            </button>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" aria-label="Editar" (click)="editUser(element)" id="button_edit">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="borrar">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-icon-button  color="warn" (click)="deleteData(element.id)" id ="button_delete">
+      <mat-icon id="button_delete_name">delete</mat-icon>
+      </button>
+      </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
 
 
-<div class="part8">
-  <mat-form-field appearance="fill">
-    <mat-label><p>NOMBRE CLIENTE</p></mat-label>
-    <input matInput [(ngModel)]="name">
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label><P>COLORES</P></mat-label>
-    <input matInput [(ngModel)]="decoracion">
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label><P>TIPO DICEÑO</P></mat-label>
-    <input matInput [(ngModel)]="desing">
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label><P>SITIO</P></mat-label>
-    <input matInput [(ngModel)]="lugar">
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label><P>DETALLES EXTRAS</P></mat-label>
-    <input matInput [(ngModel)]="detalles">
-  </mat-form-field>
 
-  <button class="boton1" mat-raised-button color="primary" (click)="SaveData()"><p>agregar pedido</p></button>
-</div>
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef><P>NOMBRE CLIENTE</P></th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="decor">
-    <th mat-header-cell *matHeaderCellDef> <P>COLORES</P></th>
-    <td mat-cell *matCellDef="let element"> {{element.decor}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="desing">
-    <th mat-header-cell *matHeaderCellDef><P>TIPO DICEÑO</P></th>
-    <td mat-cell *matCellDef="let element"> {{element.desing}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="place">
-    <th mat-header-cell *matHeaderCellDef><p>SITIO</p> </th>
-    <td mat-cell *matCellDef="let element"> {{element.place}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="details">
-      <th mat-header-cell *matHeaderCellDef><p>DETALLES EXTRAS</p> </th>
-      <td mat-cell *matCellDef="let element"> {{element.details}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="actualizar">
-    <th mat-header-cell *matHeaderCellDef> </th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="primary" (click)="editData()"><p>EDITAR</p></button>
-    </td>
-  </ng-container>
-
-  <ng-container matColumnDef="borrar">
-    <th mat-header-cell *matHeaderCellDef> </th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-raised-button class="bot2" (click)="deleteData(element.id)"><p>BORRAR</p></button>
-    </td>
-
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>

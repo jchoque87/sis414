@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ParedesComponent } from './paredes/paredes.component';
-import { FlooteComponent } from './paredes/sub/floote/floote.component';
-import { Parte1Component } from './paredes/sub/parte1/parte1.component';
 import { Parte2Component } from './paredes/sub/parte2/parte2.component';
 import { Parte3Component } from './paredes/sub/parte3/parte3.component';
 import { Parte4Component } from './paredes/sub/parte4/parte4.component';
@@ -60,7 +58,15 @@ import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admi
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTreeModule } from '@angular/material/tree';
+
+import { DialogOverviewExampleDialog1 } from './admin/paredes-admin/paredes-admin.component';
+import { DialogOverviewExampleDialogAdd1 } from './admin/paredes-admin/paredes-admin.component';
+import { MatStepperModule } from '@angular/material/stepper';
+
+import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 
 @NgModule({
   declarations: [
@@ -70,14 +76,11 @@ import {MatMenuModule} from '@angular/material/menu';
     PuertasComponent,
     NofoundComponent,
     MainComponent,
-
     AsideComponent,
     MueblesDormitorioComponent,
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
-    FlooteComponent,
-    Parte1Component,
     Parte2Component,
     Parte3Component,
     Parte4Component,
@@ -98,7 +101,11 @@ import {MatMenuModule} from '@angular/material/menu';
     LucesemidirectasAdminComponent,
     TableComponent,
     IndexAdminComponent,
-   
+    DialogOverviewExampleDialog,
+    DialogOverviewExampleDialogAdd,
+    DialogOverviewExampleDialogAdd1,
+    DialogOverviewExampleDialog1,
+
   ],
   imports: [
     BrowserModule,
@@ -126,6 +133,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatTabsModule,
     MatDialogModule,
     MatMenuModule,
+    MatTreeModule,
+    MatStepperModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

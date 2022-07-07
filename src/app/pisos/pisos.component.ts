@@ -3,16 +3,6 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { PisosService } from '../services/pisos.service';
 
-/*
-export interface users {
-  id: number;
-  name: string;
-  phone: string;
-  username: string;
-  website: string;
-  email: string;
-}
-*/
 @Component({
   selector: 'app-pisos',
   templateUrl: './pisos.component.html',

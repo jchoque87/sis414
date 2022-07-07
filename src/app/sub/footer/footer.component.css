@@ -1,5 +1,5 @@
 footer{
-    background-color: #4c7397;
+    background-color: #385d81;
     color: white;
     flex: 1 1 100%;
     padding:2rem;
@@ -11,7 +11,7 @@ footer>div{
 }
 #footer_contacto{
     text-align: center;
-    
+
 }
 #footer_contacto>p,.msj{
      margin: 10px;

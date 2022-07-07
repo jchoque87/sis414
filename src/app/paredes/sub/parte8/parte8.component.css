@@ -1,22 +1,82 @@
-
-.color{
-  background-color: #4c7397;
-}
 /*#4c7397*/
+
 .example-card {
-  max-width:300px;
-  background-color:  #d9d9d9;
+  max-width: 300px;
+  background-color: #d9d9d9;
+}
+.color{
+  background-color: hsl(210, 38%, 45%);
+}
+mat-card-content{
+  font-family: 'Gill Sans';
+  font-size: 20px;
+
+ }
+.example-header-image {
+  background-image: url('https://i.pinimg.com/originals/fc/7b/8a/fc7b8a830820b868dfa60eb831b74d2f.jpg');
+  background-size: cover;
+}
+.texnombre{
+  font-family: 'Gill Sans';
+  font-size: 31px;
 }
 
-.bot{
-  background-color: #4c7397;
-}
-
-.p{
- color:  #d9d9d9;
-}
 h1{
   color: #d9d9d9;
-  padding-left: 515px;
-    padding-top: 50px;
+  padding-left: 400px;
+  padding-top: 50px;
+  font-family: 'Gill Sans';
+  font-size: 45px;
+}
+
+.example-card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 10px;
+}
+
+.example-card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.example-card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.example-card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.example-card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(2, 47, 72);
+  padding: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.example-card .back p {
+  letter-spacing: 1px;
+}
+
+.example-card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.example-card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }

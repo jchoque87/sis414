@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>AGREGAR PEDIDO PAREDES</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>NOMBRE CLIENTE</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+  <mat-label>COLORES</mat-label>
+    <input matInput [(ngModel)]="data.decor">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>TIPO DICEÑO</mat-label>
+    <input matInput [(ngModel)]="data.desing">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>SITIO</mat-label>
+    <input matInput [(ngModel)]="data.place">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label> DETALLES EXTRAS</mat-label>
+    <input matInput [(ngModel)]="data.details">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cerrar</button>
+  <button mat-button (click)="addUser()">Guardar</button>
+</div>
+
+

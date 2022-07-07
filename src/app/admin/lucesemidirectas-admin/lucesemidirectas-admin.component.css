@@ -1,0 +1,71 @@
+table{
+        width: 90%;
+        background-color:#d7d9ce;
+        align-content: center;
+        margin-left: 50px;
+}
+tr:hover{
+        background-color: #119da4;
+
+  }
+  th{
+        background-color: #32a8bf;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size:15px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+/*matformfieldes*/
+h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: underline;
+}
+.mat-form-fields{
+        background-color: rgb(229, 242, 245);
+        width: 40%;
+        align-content: center;
+        margin-left: 30%;
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-top: 10px;
+}
+#button1{
+        margin-left:15%;
+
+}
+mat-form-field{
+        padding-left: 8px;
+
+}
+
+/*button_delete and edit*/
+
+#button_delete:hover{
+        box-shadow: 0 0 10px rgb(255, 255, 255),
+                    0 0 30px rgb(255, 255, 255),
+                    0 0 70px  rgb(0, 255, 42),
+                    0 0 130px rgb(255, 0, 0);
+}
+#button_delete_name{
+        align-content: center;
+}
+#button_edit:hover{
+        box-shadow: 0 0 10px rgb(255, 255, 255),
+                    0 0 30px  rgb(255, 255, 255),
+                    0 0 70px  rgb(23, 119, 143),
+                    0 0 130px rgb(22, 21, 82);
+}
+/*boton de registrar*/
+.button_register{
+    background-color: rgb(14, 59, 143);
+    color:white;
+    width: 100%;
+    border-radius: 0%;
+}
+.button_register:hover{
+        background-color: white;
+        color: black;
+}
