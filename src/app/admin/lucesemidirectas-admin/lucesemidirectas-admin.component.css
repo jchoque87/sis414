@@ -1,16 +1,16 @@
 table{
         width: 90%;
-        background-color: rgb(222, 248, 246);
+        background-color:#d7d9ce;
         align-content: center;
         margin-left: 50px;
-}  
+}
 tr:hover{
-        background-color: rgb(172, 238, 238);
-      
+        background-color: #119da4;
+
   }
   th{
-        background-color: rgb(18, 143, 165);
-        color: white;
+        background-color: #32a8bf;
+        color: #ffffff;
         text-transform: uppercase;
         font-size:15px;
         font-weight: bold;
@@ -34,30 +34,23 @@ h2{
 }
 #button1{
         margin-left:15%;
-        
+
 }
 mat-form-field{
         padding-left: 8px;
-       
+
 }
 
 /*button_delete and edit*/
-#button_delete{
-        background-color: rgb(224, 22, 22) ;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-}
+
 #button_delete:hover{
         box-shadow: 0 0 10px rgb(255, 255, 255),
                     0 0 30px rgb(255, 255, 255),
                     0 0 70px  rgb(0, 255, 42),
-                    0 0 130px yellow;
+                    0 0 130px rgb(255, 0, 0);
 }
 #button_delete_name{
-        margin-top: -13px;
         align-content: center;
-        
 }
 #button_edit:hover{
         box-shadow: 0 0 10px rgb(255, 255, 255),
@@ -65,4 +58,14 @@ mat-form-field{
                     0 0 70px  rgb(23, 119, 143),
                     0 0 130px rgb(22, 21, 82);
 }
-
+/*boton de registrar*/
+.button_register{
+    background-color: rgb(14, 59, 143);
+    color:white;
+    width: 100%;
+    border-radius: 0%;
+}
+.button_register:hover{
+        background-color: white;
+        color: black;
+}

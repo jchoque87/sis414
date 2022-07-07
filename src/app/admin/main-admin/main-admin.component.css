@@ -1,0 +1,20 @@
+.mat-form-field {
+  margin-right: 5px;
+}
+.mb-0{
+  font-size: 1rem;
+}
+.bg-secondary {
+  background-color:white;
+    background-image:url(../../../assets/img/marble.webp);
+}
+.text-primary{
+  color: rgb(18, 18, 235);
+}
+#slogan{
+  background-color: #bbcfd7;
+  background-color:white;
+    background-image:url(../../../assets/img/marble.webp);
+  font-size: 15px;
+  text-align: center;
+}

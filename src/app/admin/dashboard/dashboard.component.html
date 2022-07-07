@@ -1,44 +1,101 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Dashboard</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-    <button  mat-icon-button routerLink='' at-icon-button  class = "icono-de-ejemplo"  >
-      <mat-icon >close</mat-icon >
-    </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Dashboard</span>
+  <div class="d-flex align-items-center ms-4 mb-4">
+    <div class="position-relative">
+        <img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+    </div>
+    <div class="ms-3">
+        <h6 class="mb-0">Jose </h6>
+    </div>
+</div>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button  mat-icon-button routerLink='' at-icon-button  class = "icono-de-ejemplo"  >
+    <mat-icon >close</mat-icon >
+  </button>
+</mat-toolbar>
 
 
-  </mat-toolbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class="color2">
-        <mat-selection-list #shoes [multiple]="false">
+  <mat-drawer mode="side" opened class="color2">
+      <mat-selection-list #shoes [multiple]="false">
 
-            <mat-list-option>
-                <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
-            </mat-list-option>
 
-            <mat-list-option>
-              <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
-            </mat-list-option>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+                <img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+            </div>
+            <div class="ms-3">
+                <h6 class="mb-0">Jose </h6>
+                <span>Permfil</span>
+            </div>
+        </div>
+      </button>
+      <mat-menu #menu="matMenu">
+        <img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+          <a mat-button [routerLink]="['/']" >Menu principal</a>
+        <button mat-menu-item><img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+          <a mat-button [routerLink]="['/paredes']">Paredes</a></button>
+        <button mat-menu-item><img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+          <a mat-button [routerLink]="['/pisos']">Pisos</a></button>
+        <button mat-menu-item><img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+          <a mat-button [routerLink]="['/muebles_dormitorio']" >Muebles</a></button>
+        <button mat-menu-item><img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+          <a mat-button [routerLink]="['/lucessemidirectas']">luces</a></button>
+          <button mat-menu-item><img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+            <a mat-button [routerLink]="['/contacto']">Contacto</a></button>
+      </mat-menu>
 
-            <mat-list-option>
-              <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
-            </mat-list-option>
+<mat-menu #animals="matMenu">
+<img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+<a mat-button [routerLink]="['/']" >Menu principal</a>
 
-            <mat-list-option>
-              <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
-            </mat-list-option>
+<button mat-menu-item [matMenuTriggerFor]="invertebrates"><a mat-button [routerLink]="['/paredes']">Paredes</a></button>
+</mat-menu>
+<mat-menu #invertebrates="matMenu">
+<img class="rounded-circle" src="img./../../../../assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+<a mat-button [routerLink]="['/paredes']">Paredes</a>
+</mat-menu>
 
-         </mat-selection-list>
-    </mat-drawer>
-    <mat-drawer-content>
-        <router-outlet></router-outlet>
-    </mat-drawer-content>
+
+
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin']"><mat-icon>dashboard</mat-icon> Dashboard</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin/pisos']"><mat-icon>mms</mat-icon>Pisos</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin/pared']"> <mat-icon>wallet</mat-icon>Paredes</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin/lucesemidirectas']"><mat-icon>highlight</mat-icon>lucesemidirectas</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin/MueblesDormitorio']"><mat-icon>camera_roll</mat-icon>Muebles Dormitorio</a>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <a mat-button [routerLink]="['/admin/machimbres']"><mat-icon>calendar_view_day</mat-icon>Machimbres</a>
+          </mat-list-item>
+
+      </mat-selection-list>
+  </mat-drawer>
+  <mat-drawer-content>
+      <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>

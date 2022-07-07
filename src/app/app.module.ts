@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ParedesComponent } from './paredes/paredes.component';
-import { FlooteComponent } from './paredes/sub/floote/floote.component';
-import { Parte1Component } from './paredes/sub/parte1/parte1.component';
 import { Parte2Component } from './paredes/sub/parte2/parte2.component';
 import { Parte3Component } from './paredes/sub/parte3/parte3.component';
 import { Parte4Component } from './paredes/sub/parte4/parte4.component';
@@ -56,8 +54,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
 
 import { DialogOverviewExampleDialog1 } from './admin/paredes-admin/paredes-admin.component';
@@ -66,6 +67,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialog2} from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
+import { DialogOverviewExampleDialogAdd2 } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 
 @NgModule({
   declarations: [
@@ -75,14 +78,11 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     PuertasComponent,
     NofoundComponent,
     MainComponent,
-
     AsideComponent,
     MueblesDormitorioComponent,
     LucesSemidirectasComponent,
     LinksComponent,
     HeaderComponent,
-    FlooteComponent,
-    Parte1Component,
     Parte2Component,
     Parte3Component,
     Parte4Component,
@@ -98,13 +98,17 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     DashboardComponent,
     PisosAdminComponent,
     MainAdminComponent,
+    MueblesDormitorioAdminComponent,
     ParedesAdminComponent,
     LucesemidirectasAdminComponent,
     TableComponent,
+    IndexAdminComponent,
     DialogOverviewExampleDialog,
     DialogOverviewExampleDialogAdd,
     DialogOverviewExampleDialogAdd1,
     DialogOverviewExampleDialog1,
+    DialogOverviewExampleDialog2,
+    DialogOverviewExampleDialogAdd2,
 
   ],
   imports: [
@@ -132,8 +136,10 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
+    MatMenuModule,
     MatTreeModule,
     MatStepperModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

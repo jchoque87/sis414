@@ -21,6 +21,7 @@ h1{
 
 }
 
+
 section {
   display: flex;
   justify-content: space-around;
@@ -43,6 +44,16 @@ div{
 .example-button-row .mat-button-base {
   margin: 8px 50px 8px 0;
 }
+.example-button-row .mat-button-base:hover{
+  
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #95929148 ;
+
+}
 
 .example-flex-container {
   display: flex;
@@ -64,7 +75,22 @@ a{
     border-radius: 50px;
     background-color: #ba9a88 ;
     margin-left: 30px;
+}
+button{
+  margin:0px;
+  padding:0px;
+}
+.ex1{
+  font-size: 15px;
+  font-size: 15px;
+  color:#05668d;
+ 
+  box-shadow: 3px 3px 3px 3px #ba9a88;
 
+  margin-left: 0px;
+}
+.example{
+  margin:0px;
 }
 img{
   height: 25px;
