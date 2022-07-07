@@ -1,14 +1,29 @@
-table {
-  width: 100%;
-}
-.example-card {
-  max-width: 400px;
-}
 .navbar{
   background-color: #0f69f0fb;
 }
-table {
-  width: 100%;
+/*#4c7397*/
+.example-card {
+  max-width:300px;
+  background-color:  #d9d9d9;
+
+}
+h2{
+  color: #0e0d0d;
+  padding-left: 400px;
+  padding-top: 50px;
+  font-family: 'Gill Sans';
+  font-size: 45px;
+}
+.color{
+  background-image:linear-gradient(0deg, #d2c8bc , rgba(255,255,255,0)) ;
+    background-image:url(../../../assets/img/textura-de-madera.jpg);
+}
+.bot{
+  background-color: #4c7397;
+}
+
+.p{
+ color:  #d9d9d9;
 }
 .container{
   max-width: 1000px;
@@ -50,6 +65,9 @@ table {
   margin: auto;
   overflow: hidden;
   padding: 60px 0;
+}
+.movie-us{
+  background-color: #4c7397;
 }
 .numbers{
   width: 100%;
@@ -105,28 +123,19 @@ table {
   border-radius: 5px;
 }
 .noticias{
-  background-color: #99c9d8;
+  background-color: #4c7397;
 }
 .nigth{
-  background-color: #99c9d8;
   padding: 60px 0;
   height: 600px;
   display: flex;
   justify-content: space-evenly;
-  display: flex;
 }
 .nigth>img{
   width: 400px;
   height: 300px;
   vertical-align:middle;margin:30px 10px;
   animation: ease-in animationimg 5s;
-}
-.text-nigth{
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 15px;
-  font-size: 15px;
-  margin: 30px 90px 140px 50px;
 }
 .text-nigth a{
   margin: 28px 0 0 0;
@@ -151,6 +160,8 @@ table {
   background: #fff;
   margin-bottom: 30px;
   padding: 45px 30px 60px 30px;
+  background-color:white;
+    background-image:url(../../../assets/img/marble.webp);
 }
 .movies:hover{
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.26);

@@ -1,19 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MueblesDormitorioService } from 'src/app/services/muebles-dormitorio.service';
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
-export class GridListDynamicExample {
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
+export interface UserData {
+  id: string;
+  name: string;
+  job: string;
+  superficie: string;
+  costo:string;
+  envio:string;
 }
 
 @Component({
@@ -23,61 +18,137 @@ export class GridListDynamicExample {
 })
 export class MueblesDormitorioAdminComponent implements OnInit {
 
-  tabLoadTimes: Date[] = [];
-  getTimeLoaded(index: number) {
-    if (!this.tabLoadTimes[index]) {
-      this.tabLoadTimes[index] = new Date();
-    }
-    return this.tabLoadTimes[index];
+  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones2' ,'Botones'];
+  dataSource: any[] = [];
+  nombre:  any = "";
+  trabajo: any = "";
+  superficies: any =" ";
+  Precio:any ="";
+  tenvio:any="";
+  Botones: any= "";
+  Botones2: any= "";
+
+  constructor(private mueblesdormitorio: MueblesDormitorioService,
+              public dialog: MatDialog) { }
+
+              ngOnInit(): void {
+                this.mueblesdormitorio.getUsers().subscribe(
+                  (data: any) => {
+                    this.dataSource = Object.keys(data).map((key) => {
+                      const newData={
+                        id: key,
+                        job:data[key].job,
+                        name:data[key].name,
+                        superficie:data[key].superficie,
+                        costo:data[key].costo,
+                        envio:data[key].envio
+                      }
+                      return newData });
+
+                  })
+              }
+              SaveData(){
+                const data = {
+                  "name": this.nombre,
+                  "job": this.trabajo,
+                  "superficie":this.superficies,
+                  "costo":this.Precio,
+                  "envio":this.tenvio
+                };
+                this.mueblesdormitorio.addUser(data).subscribe(
+                  (data: any) => {
+                    console.log(data);
+                  })
+              }
+              deleteData(key:string){
+
+                console.log(key);
+               this.mueblesdormitorio.deleteUser(key).subscribe(data =>{
+                 console.log(data);
+                }, error =>{
+                   console.error(error);
+                });
+
+              }
+
+            addUser(){
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogAdd2, {
+      width: '300px',
+      data: {
+        name: this.nombre,
+        job: this.trabajo,
+        superficie:this.superficies,
+        costo:this.Precio,
+        envio:this.tenvio
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });    }
+
+  editUser(row:any){
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog2, {
+      width: '700px',
+      height:'300px',
+      data: row,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
+}
 
-  displayedColumns: string [] = ['name','furniture','desing','place', 'details','actualizar','borrar'];
-  dataSource:   any[] = [];
-  name:         any = "";
-  desing:       any = "";
-  mate:        any = "";
-  detalles:     any = "";
-  mueble:       any = "";
-  borrar:       any = "";
-  actualizar:   any = "";
 
-  constructor(private mueblesdormitorio: MueblesDormitorioService) { }
 
-  ngOnInit(): void {
-    this.mueblesdormitorio.getUsers().subscribe(
+@Component({
+  selector: 'actualizarmueblescuadrodedialogo',
+  templateUrl: 'actualizarmueblescuadrodedialogo.html',
+})
+export class DialogOverviewExampleDialog2 {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog2>,
+    @Inject(MAT_DIALOG_DATA) public data: UserData,
+    private mueblesdormitorio: MueblesDormitorioService,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+  updateUser():void{
+    this.mueblesdormitorio.updateUser(this.data).subscribe(
       (data: any) => {
-        this.dataSource = Object.keys(data).map((key) => {
-          const newData={
-            id:key,
-            name:data[key].name,
-            decor:data[key].decor,
-            desing:data[key].desing,
-            place:data[key].place,
-            details:data[key].details,
-            furniture:data[key].furniture
-          }
-          return newData });
-      })
+        console.log(data);
+      });
+    this.dialogRef.close();
   }
-  SaveData(){
-    const data = {
-      "name": this.name,
-      "desing": this.desing,
-      "place": this.mate,
-      "details": this.detalles,
-      "furniture": this.mueble,
-    };
-    this.mueblesdormitorio.addUser(data).subscribe(
+}
+
+
+@Component({
+  selector: 'ProductosDialogo',
+  templateUrl: 'ProductosDialogo.html',
+})
+export class DialogOverviewExampleDialogAdd2 {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog2>,
+    @Inject(MAT_DIALOG_DATA) public data: UserData,
+    private mueblesdormitorio : MueblesDormitorioService,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+  addUser():void{
+    this.dialogRef.close();
+  }
+
+  SaveData():void{
+    this.mueblesdormitorio.addUser(this.data).subscribe(
       (data: any) => {
         console.log(data);
       })
-    }
-    deleteData(key:string){
-      console.log(key);
-    this.mueblesdormitorio.deleteUser(key).subscribe(data =>{
-      console.log(data);
-      }, error =>{
-        console.error(error);
-      });
-    }
+  }
+
 }

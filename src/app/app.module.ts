@@ -67,6 +67,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
+import { DialogOverviewExampleDialog2} from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
+import { DialogOverviewExampleDialogAdd2 } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 
 @NgModule({
   declarations: [
@@ -105,6 +107,8 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     DialogOverviewExampleDialogAdd,
     DialogOverviewExampleDialogAdd1,
     DialogOverviewExampleDialog1,
+    DialogOverviewExampleDialog2,
+    DialogOverviewExampleDialogAdd2,
 
   ],
   imports: [
@@ -128,14 +132,14 @@ import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/l
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatTableModule, 
+    MatTableModule,
     HttpClientModule,
     MatTabsModule,
     MatDialogModule,
     MatMenuModule,
     MatTreeModule,
     MatStepperModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
