@@ -108,8 +108,8 @@ export class ParedesAdminComponent implements OnInit {
 
 
 @Component({
-  selector: 'example-dialog',
-  templateUrl: 'example-dialog.html',
+  selector: 'editarpared',
+  templateUrl: 'paredes-admin.editar.html',
 })
 export class DialogOverviewExampleDialog1 {
   constructor(
@@ -133,8 +133,8 @@ export class DialogOverviewExampleDialog1 {
 
 
 @Component({
-  selector: 'addUser',
-  templateUrl: 'addUser.html',
+  selector: 'añadirpared',
+  templateUrl: 'paredes-admin.añadir.html',
 })
 export class DialogOverviewExampleDialogAdd1 {
   constructor(
@@ -151,5 +151,12 @@ export class DialogOverviewExampleDialogAdd1 {
 
   addUser():void{
     this.dialogRef.close();
+  }
+
+  SaveData():void{
+    this.pared.addUser(this.data).subscribe(
+      (data: any) => {
+        console.log(data);
+      })
   }
 }
