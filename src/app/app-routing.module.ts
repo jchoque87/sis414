@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
+import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
@@ -25,9 +26,9 @@ const routes: Routes = [
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
-
-  { path: 'admin',component: DashboardComponent,
-    children: [
+  { path: 'admin', component:DashboardComponent,
+      
+    children:[
       {
         path:  '',
         component:  MainAdminComponent
@@ -37,6 +38,10 @@ const routes: Routes = [
         component:  PisosAdminComponent
       },
       {
+        path:  'MueblesDormitorio',
+        component:  MueblesDormitorioAdminComponent
+      },
+      {  
         path:  'pared',
         component:  ParedesAdminComponent
       },
@@ -45,11 +50,11 @@ const routes: Routes = [
         component: LucesemidirectasAdminComponent
       }
     ]
+   
   },
-  { path: '**', component: NofoundComponent }
 ];
 
-@NgModule({
+ @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ParedService } from '../sercices/pared.service';
 
-
-
 @Component({
   selector: 'app-parte8',
   templateUrl: './parte8.component.html',
@@ -65,5 +63,8 @@ export class Parte8Component implements OnInit {
        console.error(error);
     });
   }
+
+
+
 }
 

@@ -4,15 +4,18 @@
 
 export const environment = {
   firebaseConfig: {
-    apiKey: "AIzaSyCnn4Gi6OQimeCySQ4hoq70oarIflbTc0E",
-    authDomain: "decoracionesinteriores-cb418.firebaseapp.com",
-    projectId: "decoracionesinteriores-cb418",
-    storageBucket: "decoracionesinteriores-cb418.appspot.com",
-    messagingSenderId: "690300930699",
-    appId: "1:690300930699:web:2203b7805f0f29e10be28e"
+    apiKey: "AIzaSyCJyyF8WKdOUpKQtVMED093EBB33-ucsmQ",
+  authDomain: "lucessemidirectas.firebaseapp.com",
+  projectId: "lucessemidirectas",
+  storageBucket: "lucessemidirectas.appspot.com",
+  messagingSenderId: "631957466150",
+  appId: "1:631957466150:web:050b47e21e9e92934d4ae7",
+  measurementId: "G-FE7DJC33E9"
   },  
   production: false
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

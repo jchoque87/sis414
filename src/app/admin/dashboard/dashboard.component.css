@@ -1,21 +1,33 @@
-.example-container {
-    width: 99%;
-    height: 40%;
-    margin: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    height:100%;
-    background-color: #5083b6;
-}
 
+.mb-0{
+  font-size:1rem;
+}
+.example-container {
+  width: 99%;
+  height: 40%;
+  margin: 1px;
+  border: 1px solid #555;
+  height:100%;
+  background-color: #5083b6;
+
+  background: -webkit-linear-gradient(to right, hsla(180, 79%, 48%, 0.26), hsla(240, 74%, 43%, 0.404), hsla(251, 49%, 47%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
+  background: linear-gradient(to right, hsla(180, 88%, 53%, 0.26), hsla(240, 64%, 57%, 0.404), hsla(249, 69%, 45%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
+}
 .example-spacer {
   flex : 1  1 auto;
 }
 
-.color2{
-  background-color: #d9e6f2;
+.menu{
+  margin-left: 20px;
 }
+
+.color2{
+  background: -webkit-linear-gradient(to right, hsla(180, 79%, 48%, 0.26), hsla(240, 74%, 43%, 0.404), hsla(251, 49%, 47%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
+  background: linear-gradient(to right, hsla(180, 88%, 53%, 0.26), hsla(240, 64%, 57%, 0.404), hsla(249, 69%, 45%, 0.349)), url(../../../assets/img/textura-de-madera.jpg);
+}
+
 a{
-  color: #385d81;
+  color: #121488;
 }
 
 

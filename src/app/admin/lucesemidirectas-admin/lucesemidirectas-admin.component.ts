@@ -17,7 +17,7 @@ export interface UserData {
   styleUrls: ['./lucesemidirectas-admin.component.css']
 })
 export class LucesemidirectasAdminComponent implements OnInit {
-  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones','Botones2'];
+  displayedColumns: string[] = ['job', 'name','superficie','costo','envio','Botones2' ,'Botones'];
   dataSource: any[] = [];
   nombre:  any = "";
   trabajo: any = "";
@@ -86,10 +86,11 @@ export class LucesemidirectasAdminComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });    }
+
   editUser(row:any){
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '700px',
-      height:'400px',
+      height:'300px',
       data: row,
     });
 
@@ -102,8 +103,8 @@ export class LucesemidirectasAdminComponent implements OnInit {
 
 
 @Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog-overview-example-dialog.html',
+  selector: 'actualizarlucescuadrodedialogo',
+  templateUrl: 'actualizarlucescuadrodedialogo.html',
 })
 export class DialogOverviewExampleDialog {
   constructor(
@@ -126,8 +127,8 @@ export class DialogOverviewExampleDialog {
 
 
 @Component({
-  selector: 'dialodAddUser',
-  templateUrl: 'dialodAddUser.html',
+  selector: 'AgregarProductosDialogo',
+  templateUrl: 'AgregarProductosDialogo.html',
 })
 export class DialogOverviewExampleDialogAdd {
   constructor(
@@ -140,11 +141,17 @@ export class DialogOverviewExampleDialogAdd {
     this.dialogRef.close();
   }
   addUser():void{
-
     this.dialogRef.close();
   }
-}
 
+  SaveData():void{
+    this.lucesemidirectas.addUser(this.data).subscribe(
+      (data: any) => {
+        console.log(data);
+      })
+  }
+ 
+}
 
 
 
