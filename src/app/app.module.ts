@@ -69,6 +69,8 @@ import { DialogOverviewExampleDialog} from './admin/lucesemidirectas-admin/luces
 import { DialogOverviewExampleDialogAdd } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { DialogOverviewExampleDialog2} from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 import { DialogOverviewExampleDialogAdd2 } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
+import { MachimbresComponent } from './machimbres/machimbres.component';
+import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +111,8 @@ import { DialogOverviewExampleDialogAdd2 } from './admin/muebles-dormitorio-admi
     DialogOverviewExampleDialog1,
     DialogOverviewExampleDialog2,
     DialogOverviewExampleDialogAdd2,
+    MachimbresComponent,
+    MachimbresAdminComponent,
 
   ],
   imports: [
