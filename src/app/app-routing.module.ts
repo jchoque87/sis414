@@ -16,8 +16,7 @@ import { MueblesDormitorioAdminComponent } from './admin/muebles-dormitorio-admi
 import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.component';
 
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
-import { MachimbresComponent } from './machimbres/machimbres.component';
-import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
+
 
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
@@ -27,7 +26,6 @@ const routes: Routes = [
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'machimbres', component:MachimbresComponent},
   { path: 'admin', component:DashboardComponent,
       
     children:[
@@ -50,10 +48,6 @@ const routes: Routes = [
       {
         path:  'lucesemidirectas', 
         component: LucesemidirectasAdminComponent
-      },
-      {
-        path:  'machimbres',
-        component:  MachimbresAdminComponent
       }
     ]
    
