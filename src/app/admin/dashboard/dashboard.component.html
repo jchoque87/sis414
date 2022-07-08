@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
       <mat-icon> <p>menu</p></mat-icon>
   </button>
   <span>Dashboard</span>
@@ -23,6 +24,12 @@
       <mat-icon>close</mat-icon>
   </button>
 </mat-toolbar>
+
+  
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="color2">
+      <mat-selection-list #shoes [multiple]="false">
 
 
 <mat-drawer-container class="example-container">
@@ -80,6 +87,7 @@
                   Dashboard</a>
           </mat-list-item>
 
+
           <mat-list-item role="listitem">
               <a mat-button [routerLink]="['/admin/pisos']">
                   <mat-icon>mms</mat-icon>Pisos</a>
@@ -91,6 +99,7 @@
           </mat-list-item>
 
           <mat-list-item role="listitem">
+
               <a mat-button [routerLink]="['/admin/lucesemidirectas']">
                   <mat-icon>highlight</mat-icon>lucesemidirectas</a>
           </mat-list-item>
@@ -111,4 +120,6 @@
       <router-outlet></router-outlet>
   </mat-drawer-content>
 
+
+           
 </mat-drawer-container>
