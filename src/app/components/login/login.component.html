@@ -1,0 +1,29 @@
+<div class="login-page">
+    <div class="form_container mat-elevation-z5">
+        <h1>Iniciar Sesion</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <mat-form-field>
+                <input matInput placeholder="Correo electronico" formControlName="email">
+                    <mat-error *ngIf="email?.errors?.['required']">
+                        Email requerido
+                    </mat-error>
+                    <mat-error *ngIf="email?.errors?.['email']">
+                        Porfavor introduzca un email valido
+                    </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Contraseña" formControlName="password" type="password">
+                    <mat-error *ngIf="email?.errors?.['required']">
+                        Llene los campos
+                    </mat-error>
+            </mat-form-field>
+            <div class="center margin-top">
+                <button mat-raised-button color="primary" type="submit">
+                    Iniciar Sesiom
+                </button>
+            </div>
+            <span class=" center margin-top"routerLink="/forgot-password"><a routerLink="main">¿Olvidaste tu contraseña?</a></span>
+            <span class="center margin-top">¿No tiene cuenta? <a routerLink="/sign-up">Unase!</a></span>
+        </form>
+    </div>
+</div>

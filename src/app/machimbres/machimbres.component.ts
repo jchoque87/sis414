@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TableComponent } from '../table/table.component';
 
 @Component({
   selector: 'app-machimbres',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MachimbresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private table: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openDialog() {
+    this.table.open(TableComponent, {
+      width: '30%'
+    });
+  }
 }

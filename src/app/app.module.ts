@@ -49,7 +49,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { TableComponent } from './table/table.component';
 
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
@@ -71,6 +70,13 @@ import { DialogOverviewExampleDialog2} from './admin/muebles-dormitorio-admin/mu
 import { DialogOverviewExampleDialogAdd2 } from './admin/muebles-dormitorio-admin/muebles-dormitorio-admin.component';
 import { MachimbresComponent } from './machimbres/machimbres.component';
 import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +119,8 @@ import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-ad
     DialogOverviewExampleDialogAdd2,
     MachimbresComponent,
     MachimbresAdminComponent,
+    SignUpComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -143,6 +151,10 @@ import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-ad
     MatMenuModule,
     MatTreeModule,
     MatStepperModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot(),
+    ReactiveFormsModule
 
   ],
   providers: [],

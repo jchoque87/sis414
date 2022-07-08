@@ -8,7 +8,6 @@ import { MueblesDormitorioComponent } from './muebles-dormitorio/muebles-dormito
 
 import { LucesSemidirectasComponent  } from './luces-semidirectas/luces-semidirectas.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { PisosAdminComponent } from './admin/pisos-admin/pisos-admin.component';
 import { MainAdminComponent } from './admin/main-admin/main-admin.component';
@@ -18,7 +17,10 @@ import { ParedesAdminComponent } from './admin/paredes-admin/paredes-admin.compo
 import { LucesemidirectasAdminComponent } from './admin/lucesemidirectas-admin/lucesemidirectas-admin.component';
 import { MachimbresComponent } from './machimbres/machimbres.component';
 import { MachimbresAdminComponent } from './admin/machimbres-admin/machimbres-admin.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+const redirectToLogin = () =>redirectUnauthorizedTo(['login']);
+const redirectToAdmin = () =>redirectLoggedInTo(['admin']);
 const routes: Routes = [
   { path: 'lucessemidirectas', component: LucesSemidirectasComponent },
   { path: '', component: MainComponent },
@@ -26,10 +28,10 @@ const routes: Routes = [
   { path: 'muebles_dormitorio', component: MueblesDormitorioComponent},
   { path: 'pisos', component: PisosComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'login', component: LoginComponent},
   { path: 'machimbres', component:MachimbresComponent},
+  { path: 'login', component: LoginComponent, ...canActivate(redirectToAdmin)},
   { path: 'admin', component:DashboardComponent,
-      
+  ...canActivate(redirectToLogin),
     children:[
       {
         path:  '',
@@ -56,7 +58,6 @@ const routes: Routes = [
         component:  MachimbresAdminComponent
       }
     ]
-   
   },
 ];
 
