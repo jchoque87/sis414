@@ -63,5 +63,8 @@ export class Parte8Component implements OnInit {
        console.error(error);
     });
   }
+
+
+
 }
 
