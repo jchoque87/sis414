@@ -26,7 +26,10 @@ table {
   margin-top: 33px;
 }
 .text{
- color: rgb(21, 21, 21);
+ color: #000000;
+ font-size:19px;
+ font-family: 'Gill Sans';
+
 
 }
 P{
@@ -73,9 +76,7 @@ a{
   display: inline-block;
   text-align: center;
 }
-.colo{
-  background-color:  #5083b6;
-}
+
 .editar{
   position: absolute;
   padding-left: 80px;
